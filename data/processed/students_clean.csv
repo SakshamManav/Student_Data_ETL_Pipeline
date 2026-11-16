@@ -1,0 +1,992 @@
+Student ID,Name,Age,Gender,Department,Attendance,Marks,Grade,data_quality_flag,Percentage,Grade_Computed,Performance_Category,Attendance_Band
+S101,Demo Student One,20.0,Male,Computer,82.0,85.0,B,ok,85.0,B,Good,Regular
+S102,Demo Student Two,19.0,Female,Commerce,79.0,78.0,B,ok,78.0,B,Good,Regular
+S103,Demo Student Three,21.0,Male,Science,78.0,,A,missing_marks,,,,Regular
+S1398,Divya Ahmad,21.0,Female,Computer,85.0,63.0,C,ok,63.0,C,Average,Regular
+S1583,Aina Goel,21.0,Female,Computer,72.0,78.0,B,ok,78.0,B,Good,Moderate
+S1390,Karan Mishra,,Male,Management,72.0,49.0,D,ok,49.0,D,Below Average,Moderate
+S1362,Shreya Jain,20.0,Female,Management,84.0,36.0,F,ok,36.0,F,Poor,Regular
+S1899,Aina Chauhan,20.0,Female,Science,77.0,75.0,B,ok,75.0,B,Good,Regular
+S1706,Divya Kumar,21.0,Female,Commerce,79.0,51.0,D,ok,51.0,D,Below Average,Regular
+S1744,Karan Malik,21.0,Male,Computer,80.0,44.0,D,ok,44.0,D,Below Average,Regular
+S1298,Harsh Agarwal,20.0,Male,Computer,79.0,75.0,B,ok,75.0,B,Good,Regular
+S1433,Arjun Bansal,19.0,Male,Commerce,90.0,66.0,c,ok,66.0,C,Average,High
+S1614,Divya Sharma,21.0,Female,Commerce,96.0,,D,missing_marks,,,,High
+S1254,Ankit Chauhan,19.0,Male,Arts,92.0,85.0,A,ok,85.0,B,Good,High
+S1903,Manish Sharma,18.0,Male,Commerce,68.0,76.0,B,ok,76.0,B,Good,Moderate
+S1620,Nitin Goel,22.0,Male,Art,83.0,64.0,C,ok,64.0,C,Average,Regular
+S1510,Sahil Kumar,19.0,Male,Management,82.0,,D,missing_marks,,,,Regular
+S1916,Sakshi Singh,21.0,Female,Computer,81.0,52.0,,ok,52.0,D,Below Average,Regular
+S1857,Nisha Yadav,22.0,Female,Commerce,76.0,83.0,B,ok,83.0,B,Good,Regular
+S1010,Muskan Verma,19.0,Female,Management,86.0,73.0,B,ok,73.0,C,Average,Regular
+S1612,Neha Khan,20.0,Female,Management,82.0,37.0,F,ok,37.0,F,Poor,Regular
+S1588,Kunal Bansal,19.0,Male,Management,82.0,71.0,B,ok,71.0,C,Average,Regular
+S1368,Ananya Bansal,20.0,Female,Computer,98.0,71.0,B,ok,71.0,C,Average,High
+S1187,Aarav Sharma,18.0,Male,Computer,74.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1165,Anjali Khan,21.0,Female,Science,91.0,80.0,B,ok,80.0,B,Good,High
+S1421,Vivaan Rajput,22.0,Male,Computer,82.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1473,Komal Yadav,20.0,Female,Science,81.0,74.0,B,ok,74.0,C,Average,Regular
+S1415,Vivaan Verma,19.0,Male,Arts,69.0,66.0,C,ok,66.0,C,Average,Moderate
+S1035,Priya Agarwal,20.0,,Computer,82.0,61.0,C,ok,61.0,C,Average,Regular
+S1579,Vivaan Jain,,Male,Science,75.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1524,Aina Malik,19.0,Female,Arts,92.0,,B,missing_marks,,,,High
+S1154,Muskan Pandey,20.0,Female,Science,74.0,56.0,D,ok,56.0,D,Below Average,Moderate
+S1686,Deepak Sharma,19.0,Male,Computer,84.0,,D,missing_marks,,,,Regular
+S1865,Aditya Chauhan,20.0,Male,Computer,84.0,51.0,D,ok,51.0,D,Below Average,Regular
+S1870,Manish Malik,19.0,Male,Science,69.0,51.0,,ok,51.0,D,Below Average,Moderate
+s1467,Muskan Agarwal,23.0,Female,Comm.,77.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1055,Isha Agarwal,19.0,Female,Arts,63.0,46.0,D,ok,46.0,D,Below Average,Moderate
+S1386,Rohan Chauhan,21.0,Male,Science,67.0,76.0,B,ok,76.0,B,Good,Moderate
+S1654,Gaurav Pandey,21.0,Male,Science,93.0,57.0,C,ok,57.0,D,Below Average,High
+S1687,Tanvi Ahmad,19.0,,Computer,84.0,73.0,B,ok,73.0,C,Average,Regular
+S1772,Nitin Khan,20.0,Male,Computer,68.0,62.0,C,ok,62.0,C,Average,Moderate
+S1829,Komal Goel,18.0,Female,Management,86.0,69.0,C,ok,69.0,C,Average,Regular
+S1667,Ankit Jain,19.0,Male,Science,89.0,52.0,B,ok,52.0,D,Below Average,Regular
+S1114,Tarun Kumar,20.0,Male,Commerce,54.0,59.0,C,ok,59.0,D,Below Average,Low
+S1205,Sneha Tyagi,22.0,Female,Computer,89.0,88.0,A,ok,88.0,B,Good,Regular
+S1285,Divya Khan,19.0,Female,Computer,82.0,92.0,A,ok,92.0,A,Excellent,Regular
+S1493,Komal Tyagi,18.0,Female,Management,79.0,87.0,A,ok,87.0,B,Good,Regular
+S1197,Sneha Mishra,20.0,Female,Computer,99.0,66.0,C,ok,66.0,C,Average,High
+S1501,Manish Khan,20.0,Male,Science,85.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1172,Vikas Bansal,19.0,Male,Commerce,85.0,82.0,B,ok,82.0,B,Good,Regular
+S1737,Riya Chauhan,19.0,Female,Computer,64.0,50.0,D,ok,50.0,D,Below Average,Moderate
+S1047,Ritika Yadav,21.0,Female,Commerce,70.0,67.0,C,ok,67.0,C,Average,Moderate
+S1348,Gaurav Khan,19.0,Male,Management,75.0,77.0,B,ok,77.0,B,Good,Regular
+S1936,Tarun Kumar,19.0,Male,Arts,90.0,65.0,C,ok,65.0,C,Average,High
+S1424,Divya Singh,21.0,Female,Science,78.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1418,Divya Bansal,20.0,Female,Science,76.0,76.0,B,ok,76.0,B,Good,Regular
+S1147,Ankit Verma,20.0,Male,Science,79.0,58.0,c,ok,58.0,D,Below Average,Regular
+S1759,Aina Verma,20.0,Female,Commerce,88.0,72.0,B,ok,72.0,C,Average,Regular
+S1642,Pranav Singh,20.0,Male,Commerce,83.0,45.0,d,ok,45.0,D,Below Average,Regular
+S1223,Nitin Agarwal,20.0,Male,Management,74.0,46.0,D,ok,46.0,D,Below Average,Moderate
+S1592,Harsh Rawat,20.0,Male,Management,63.0,59.0,c,ok,59.0,D,Below Average,Moderate
+S1286,Karan Ahmad,18.0,Male,Commerce,79.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1014,Shreya Agarwal,21.0,Female,Science,93.0,72.0,B,ok,72.0,C,Average,High
+S1668,Gaurav Yadav,19.0,Male,Science,76.0,59.0,C,ok,59.0,D,Below Average,Regular
+,Mohit Agarwal,19.0,Male,Science,68.0,53.0,D,ok,53.0,D,Below Average,Moderate
+S1858,Karan Chauhan,19.0,Male,Comm.,91.0,74.0,B,ok,74.0,C,Average,High
+S1963,Arjun Mishra,19.0,Male,Comm.,66.0,68.0,C,ok,68.0,C,Average,Moderate
+S1890,Tarun Ahmad,19.0,Male,Commerce,100.0,58.0,C,ok,58.0,D,Below Average,High
+S1645,Vivaan Chauhan,20.0,Male,Comm.,85.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1468,Vivaan Agarwal,20.0,Male,Science,75.0,52.0,D,ok,52.0,D,Below Average,Regular
+s1832,Isha Kumar,21.0,Female,Management,78.0,61.0,C,ok,61.0,C,Average,Regular
+S1141,Vivaan Kumar,20.0,Male,Computer,62.0,,B,missing_marks,,,,Moderate
+S1972,Kavya Tyagi,19.0,Female,Comm.,91.0,85.0,A,ok,85.0,B,Good,High
+S1960,Muskan Goel,19.0,Female,Science,65.0,42.0,D,ok,42.0,D,Below Average,Moderate
+S1005,Meera Saini,20.0,Female,Arts,72.0,80.0,B,ok,80.0,B,Good,Moderate
+S1260,Shreya Sharma,19.0,Female,Science,66.0,71.0,B,ok,71.0,C,Average,Moderate
+S1337,Komal Khan,19.0,Female,Science,72.0,42.0,D,ok,42.0,D,Below Average,Moderate
+S1100,Pranav Tyagi,20.0,Male,Science,90.0,80.0,B,ok,80.0,B,Good,High
+S1766,Arjun Singh,19.0,Male,Arts,61.0,59.0,C,ok,59.0,D,Below Average,Moderate
+s1966,Divya Tyagi,19.0,Female,Management,82.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1622,Karan Rajput,19.0,Male,Management,71.0,47.0,D,ok,47.0,D,Below Average,Moderate
+S1173,Riya Saini,18.0,Female,Comm.,77.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1621,Ankit Chauhan,18.0,Male,Computer,75.0,67.0,C,ok,67.0,C,Average,Regular
+S1990,Meera Goel,21.0,Female,Arts,86.0,75.0,B,ok,75.0,B,Good,Regular
+S1962,,,Male,Management,77.0,41.0,D,ok,41.0,D,Below Average,Regular
+S1725,Nitin Malik,22.0,Male,Computer,82.0,69.0,C,ok,69.0,C,Average,Regular
+S1206,Ankit Saini,23.0,Male,Science,79.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1098,Yash Tyagi,21.0,Male,Commerce,95.0,53.0,D,ok,53.0,D,Below Average,High
+S1738,Tanvi Tyagi,19.0,Female,,71.0,80.0,B,ok,80.0,B,Good,Moderate
+S1059,Vivaan Ahmad,21.0,Male,Computer,89.0,70.0,B,ok,70.0,C,Average,Regular
+S1841,Kavya Agarwal,18.0,Female,Commerce,73.0,49.0,D,ok,49.0,D,Below Average,Moderate
+S1492,Ananya Saini,19.0,Female,Comm.,79.0,63.0,C,ok,63.0,C,Average,Regular
+S1756,Gaurav Rawat,19.0,Male,Arts,79.0,77.0,B,ok,77.0,B,Good,Regular
+S1025,Nisha Kumar,20.0,Female,Computer,92.0,89.0,A,ok,89.0,B,Good,High
+S1171,Aarav Singh,18.0,Male,Science,75.0,80.0,b,ok,80.0,B,Good,Regular
+S1853,Aarav Goel,21.0,,Computer,85.0,80.0,B,ok,80.0,B,Good,Regular
+S1257,Nisha Tyagi,21.0,Female,Arts,75.0,67.0,C,ok,67.0,C,Average,Regular
+S1373,Riya Rajput,19.0,Female,Comm.,71.0,,C,missing_marks,,,,Moderate
+S1126,Meera Kumar,19.0,Female,Management,89.0,85.0,A,ok,85.0,B,Good,Regular
+S1109,Pranav Ahmad,19.0,Male,Commerce,79.0,69.0,C,ok,69.0,C,Average,Regular
+S1095,Ritika Agarwal,19.0,Female,Commerce,93.0,73.0,B,ok,73.0,C,Average,High
+S1778,Yash Yadav,,Male,Science,75.0,85.0,A,ok,85.0,B,Good,Regular
+S1791,Sakshi Agarwal,20.0,Female,Management,81.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1793,Nitin Verma,21.0,Male,Computer,77.0,73.0,b,ok,73.0,C,Average,Regular
+S1026,Tanvi Khan,20.0,Female,Commerce,94.0,62.0,C,ok,62.0,C,Average,High
+S1409,Aina Tyagi,19.0,Female,Science,65.0,61.0,C,ok,61.0,C,Average,Moderate
+S1135,Deepak Singh,,Male,,86.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1484,Priya Yadav,19.0,Female,Computer,91.0,79.0,B,ok,79.0,B,Good,High
+S1061,Nitin Jain,21.0,Male,Science,82.0,67.0,C,ok,67.0,C,Average,Regular
+S1919,Muskan Malik,22.0,Female,Science,70.0,59.0,c,ok,59.0,D,Below Average,Moderate
+S1099,Anjali Malik,21.0,Female,Commerce,72.0,70.0,B,ok,70.0,C,Average,Moderate
+S1801,Kavya Singh,20.0,Female,Management,85.0,65.0,,ok,65.0,C,Average,Regular
+S1863,Pranav Chauhan,19.0,Male,Arts,81.0,,D,missing_marks,,,,Regular
+S1263,Sahil Goel,18.0,Male,Management,72.0,61.0,C,ok,61.0,C,Average,Moderate
+S1076,Isha Sharma,20.0,Female,Computer,80.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1221,Pranav Rajput,21.0,Male,Commerce,70.0,76.0,B,ok,76.0,B,Good,Moderate
+S1658,Komal Rajput,19.0,Female,Computer,72.0,62.0,c,ok,62.0,C,Average,Moderate
+S1169,Sakshi Rawat,21.0,Female,Computer,82.0,80.0,B,ok,80.0,B,Good,Regular
+S1743,Vikas Tyagi,19.0,Male,Computer,94.0,67.0,C,ok,67.0,C,Average,High
+S1734,Simran Ahmad,20.0,Female,Management,96.0,60.0,C,ok,60.0,C,Average,High
+S1580,Sakshi Saini,20.0,Female,Arts,63.0,56.0,C,ok,56.0,D,Below Average,Moderate
+S1054,Isha Singh,22.0,Female,Commerce,79.0,70.0,B,ok,70.0,C,Average,Regular
+S1929,Tanvi Kumar,22.0,Female,Computer,66.0,57.0,B,ok,57.0,D,Below Average,Moderate
+S1657,Shreya Ahmad,20.0,Female,Management,81.0,81.0,B,ok,81.0,B,Good,Regular
+S1952,Vikas Pandey,19.0,Male,Management,75.0,68.0,C,ok,68.0,C,Average,Regular
+S1774,Sakshi Rawat,19.0,Female,Computer,60.0,89.0,A,ok,89.0,B,Good,Moderate
+S1740,Aina Jain,21.0,Female,Computer,63.0,87.0,A,ok,87.0,B,Good,Moderate
+S1363,Nitin Khan,18.0,Male,Science,78.0,65.0,C,ok,65.0,C,Average,Regular
+S1651,Tarun Tyagi,20.0,Male,Management,62.0,49.0,D,ok,49.0,D,Below Average,Moderate
+S1939,Muskan Bansal,19.0,Female,Computer,80.0,85.0,a,ok,85.0,B,Good,Regular
+s1541,Nitin Khan,21.0,Male,Management,68.0,67.0,C,ok,67.0,C,Average,Moderate
+S1982,Anjali Rawat,18.0,Female,Science,69.0,81.0,B,ok,81.0,B,Good,Moderate
+S1910,,20.0,Female,Comm.,100.0,83.0,B,ok,83.0,B,Good,High
+S1004,Gaurav Bansal,19.0,Male,Commerce,100.0,76.0,B,ok,76.0,B,Good,High
+S1529,Karan Jain,21.0,Male,Commerce,79.0,73.0,B,ok,73.0,C,Average,Regular
+S1488,Ritika Singh,22.0,Female,Science,61.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1018,Kavya Saini,18.0,Female,Commerce,79.0,73.0,B,ok,73.0,C,Average,Regular
+S1027,Manish Sharma,21.0,Male,Science,100.0,68.0,A,ok,68.0,C,Average,High
+S1795,Meera Rawat,22.0,Female,Computer,77.0,55.0,C,ok,55.0,D,Below Average,Regular
+ S1376 ,Yash Chauhan,19.0,Male,Commerce,72.0,56.0,c,ok,56.0,D,Below Average,Moderate
+S1942,Ankit Rajput,20.0,Male,Computer,82.0,,B,missing_marks,,,,Regular
+S1695,Nitin Agarwal,20.0,Male,Comm.,72.0,55.0,C,ok,55.0,D,Below Average,Moderate
+S1380,Aditya Rawat,20.0,Male,Arts,75.0,64.0,C,ok,64.0,C,Average,Regular
+S1729,Karan Yadav,20.0,Male,Computer,72.0,67.0,,ok,67.0,C,Average,Moderate
+S1981,Sahil Rajput,,Male,Commerce,79.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1855,Vivaan Chauhan,19.0,Male,Computer,97.0,67.0,C,ok,67.0,C,Average,High
+S1535,Arjun Tyagi,21.0,Male,Commerce,79.0,81.0,B,ok,81.0,B,Good,Regular
+S1455,Rohan Saini,22.0,Male,Computer,87.0,79.0,B,ok,79.0,B,Good,Regular
+S1700,Vivaan Rawat,19.0,Male,,84.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1803,Sneha Gupta,20.0,Female,Management,68.0,,,missing_marks,,,,Moderate
+S1627,Isha Khan,18.0,Female,Management,100.0,87.0,A,ok,87.0,B,Good,High
+S1400,Komal Mishra,20.0,Female,Management,82.0,70.0,B,ok,70.0,C,Average,Regular
+S1986,Vikas Tyagi,21.0,Male,Computer,78.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1452,Aina Kumar,,Female,Commerce,90.0,82.0,B,ok,82.0,B,Good,High
+s1799,Mohit Pandey,18.0,Male,Commerce,77.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1564,Tarun Malik,21.0,Male,Computer,82.0,68.0,C,ok,68.0,C,Average,Regular
+S1723,Mohit Rajput,19.0,Male,Arts,84.0,52.0,D,ok,52.0,D,Below Average,Regular
+ S1563 ,Simran Goel,22.0,Female,Science,100.0,68.0,C,ok,68.0,C,Average,High
+S1075,Ankit Pandey,20.0,Male,Computer,67.0,52.0,C,ok,52.0,D,Below Average,Moderate
+S1180,Riya Mishra,23.0,Female,Science,80.0,70.0,A,ok,70.0,C,Average,Regular
+S1359,Aina Bansal,19.0,Female,Computer,76.0,72.0,B,ok,72.0,C,Average,Regular
+S1486,Meera Malik,23.0,Female,Commerce,59.0,34.0,,ok,34.0,F,Poor,Low
+S1770,Priya Agarwal,,Female,Management,83.0,75.0,B,ok,75.0,B,Good,Regular
+S1329,Vikas Bansal,19.0,Male,Commerce,100.0,84.0,B,ok,84.0,B,Good,High
+ S1306 ,Meera Goel,21.0,Female,Arts,100.0,72.0,B,ok,72.0,C,Average,High
+S1943,Pooja Chauhan,20.0,Female,Computer,75.0,65.0,C,ok,65.0,C,Average,Regular
+s1378,Anjali Yadav,,,Science,94.0,71.0,B,ok,71.0,C,Average,High
+S1326,Vikas Tyagi,21.0,Male,Arts,98.0,80.0,,ok,80.0,B,Good,High
+S1504,Pooja Singh,22.0,Female,Commerce,100.0,75.0,B,ok,75.0,B,Good,High
+S1499,Anjali Pandey,,Female,Commerce,92.0,71.0,B,ok,71.0,C,Average,High
+S1783,Aditya Mishra,19.0,Male,Computer,82.0,95.0,A,ok,95.0,A,Excellent,Regular
+S1786,Vivaan Malik,20.0,Male,Management,90.0,81.0,B,ok,81.0,B,Good,High
+ S1190 ,Sahil Kumar,18.0,Male,Computer,85.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1652,Nitin Mishra,20.0,Male,Science,87.0,66.0,,ok,66.0,C,Average,Regular
+S1864,Sahil Tyagi,21.0,,Commerce,65.0,,D,missing_marks,,,,Moderate
+S1111,Simran Mishra,20.0,Female,Science,78.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1531,Priya Goel,20.0,Female,Commerce,79.0,61.0,C,ok,61.0,C,Average,Regular
+S1624,Deepak Gupta,,,Management,68.0,79.0,B,ok,79.0,B,Good,Moderate
+S1058,Aina Rawat,23.0,Female,Management,82.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1761,Neha Singh,20.0,Female,Science,84.0,86.0,A,ok,86.0,B,Good,Regular
+S1573,Rohan Rawat,,Male,Management,75.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1007,Gaurav Singh,20.0,Male,Management,75.0,48.0,d,ok,48.0,D,Below Average,Regular
+S1559,Isha Gupta,19.0,Female,Arts,58.0,61.0,C,ok,61.0,C,Average,Low
+S1295,Tanvi Verma,18.0,Female,Management,92.0,79.0,B,ok,79.0,B,Good,High
+S1139,Vivaan Yadav,23.0,Male,Computer,82.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1164,Ananya Yadav,19.0,Female,Commerce,74.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1852,Harsh Rawat,20.0,Male,Commerce,78.0,67.0,C,ok,67.0,C,Average,Regular
+S1319,Sakshi Agarwal,18.0,Female,Science,95.0,97.0,A,ok,97.0,A,Excellent,High
+S1327,Shreya Jain,19.0,Female,Management,64.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1847,Shreya Chauhan,20.0,Female,Arts,100.0,,C,missing_marks,,,,High
+S1044,Nitin Singh,21.0,Male,Arts,81.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1938,Nitin Mishra,21.0,Male,Commerce,79.0,42.0,D,ok,42.0,D,Below Average,Regular
+S1064,Mohit Rawat,19.0,Male,Commerce,71.0,68.0,C,ok,68.0,C,Average,Moderate
+S1598,Mohit Gupta,22.0,Male,Commerce,81.0,60.0,C,ok,60.0,C,Average,Regular
+S1843,Aarav Agarwal,19.0,Male,Science,73.0,47.0,D,ok,47.0,D,Below Average,Moderate
+S1039,Sneha Chauhan,20.0,Female,Arts,73.0,72.0,B,ok,72.0,C,Average,Moderate
+S1787,Yash Jain,19.0,Male,Commerce,84.0,71.0,B,ok,71.0,C,Average,Regular
+S1792,Deepak Ahmad,,,Computer,74.0,63.0,C,ok,63.0,C,Average,Moderate
+S1931,Pranav Gupta,20.0,Male,Computer,67.0,66.0,C,ok,66.0,C,Average,Moderate
+S1995,Pranav Saini,20.0,Male,Commerce,96.0,62.0,C,ok,62.0,C,Average,High
+S1568,Gaurav Mishra,20.0,Male,Management,82.0,83.0,B,ok,83.0,B,Good,Regular
+S1217,Komal Gupta,21.0,Female,Arts,77.0,62.0,C,ok,62.0,C,Average,Regular
+S1271,Isha Malik,18.0,Female,Management,82.0,38.0,F,ok,38.0,F,Poor,Regular
+S1907,Sakshi Agarwal,20.0,Female,Commerce,75.0,67.0,C,ok,67.0,C,Average,Regular
+S1819,Kavya Rawat,19.0,Female,Computer,76.0,47.0,D,ok,47.0,D,Below Average,Regular
+S1340,Vikas Sharma,21.0,Male,Science,76.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1697,Neha Ahmad,19.0,Female,Commerce,79.0,69.0,C,ok,69.0,C,Average,Regular
+S1685,Sahil Singh,19.0,Male,Commerce,96.0,92.0,A,ok,92.0,A,Excellent,High
+S1138,Rohan Goel,21.0,Male,Science,82.0,,B,missing_marks,,,,Regular
+S1345,Pooja Mishra,19.0,Female,Commerce,97.0,71.0,B,ok,71.0,C,Average,High
+S1548,Shreya Agarwal,22.0,Female,Computer,92.0,64.0,,ok,64.0,C,Average,High
+S1307,Yash Rawat,20.0,Male,Science,75.0,41.0,D,ok,41.0,D,Below Average,Regular
+S1514,Simran Pandey,20.0,Female,Science,78.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1596,Pranav Kumar,20.0,Male,Computer,82.0,,C,missing_marks,,,,Regular
+S1897,Manish Malik,,Male,Computer,84.0,66.0,C,ok,66.0,C,Average,Regular
+S1751,Deepak Pandey,21.0,,Arts,68.0,42.0,D,ok,42.0,D,Below Average,Moderate
+S1866,Meera Malik,19.0,,Computer,84.0,77.0,B,ok,77.0,B,Good,Regular
+S1527,Sahil Rawat,18.0,Male,Management,82.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1062,Kunal Kumar,19.0,Male,Management,97.0,80.0,B,ok,80.0,B,Good,High
+S1878,Meera Bansal,21.0,Female,Management,82.0,85.0,A,ok,85.0,B,Good,Regular
+S1229,Manish Chauhan,,Male,Commerce,61.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1315,Deepak Gupta,20.0,Male,Science,94.0,61.0,C,ok,61.0,C,Average,High
+S1715,Tarun Singh,,Male,Management,89.0,79.0,B,ok,79.0,B,Good,Regular
+ S1602 ,Aina Verma,21.0,Female,Arts,77.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1519,Shreya Saini,19.0,Female,Computer,84.0,,C,missing_marks,,,,Regular
+S1552,Gaurav Tyagi,20.0,Male,Commerce,76.0,78.0,B,ok,78.0,B,Good,Regular
+S1603,Vivaan Rajput,20.0,Male,Management,79.0,62.0,C,ok,62.0,C,Average,Regular
+S1917,Ritika Saini,,Female,Commerce,91.0,57.0,C,ok,57.0,D,Below Average,High
+S1591,Aina Sharma,,Female,Computer,77.0,69.0,C,ok,69.0,C,Average,Regular
+S1245,Ritika Tyagi,21.0,Female,Commerce,79.0,66.0,C,ok,66.0,C,Average,Regular
+S1515,Priya Rajput,,Female,Arts,85.0,66.0,C,ok,66.0,C,Average,Regular
+S1717,Ritika Ahmad,18.0,Female,Commerce,71.0,53.0,C,ok,53.0,D,Below Average,Moderate
+S1967,Sakshi Ahmad,19.0,Female,Computer,82.0,66.0,C,ok,66.0,C,Average,Regular
+S1868,Gaurav Yadav,19.0,Male,Art,67.0,53.0,D,ok,53.0,D,Below Average,Moderate
+S1110,Ananya Sharma,19.0,Female,Management,88.0,68.0,,ok,68.0,C,Average,Regular
+S1511,Pranav Tyagi,21.0,Male,Arts,81.0,,D,missing_marks,,,,Regular
+S1849,Vivaan Gupta,,Male,Arts,100.0,71.0,B,ok,71.0,C,Average,High
+S1922,Neha Goel,19.0,Female,Computer,82.0,89.0,F,ok,89.0,B,Good,Regular
+S1708,Priya Goel,18.0,Female,Computer,84.0,84.0,B,ok,84.0,B,Good,Regular
+S1543,Isha Rawat,22.0,Female,Science,86.0,78.0,B,ok,78.0,B,Good,Regular
+S1233,Shreya Pandey,19.0,Female,Management,82.0,66.0,C,ok,66.0,C,Average,Regular
+S1420,Karan Tyagi,19.0,Male,Computer,82.0,67.0,C,ok,67.0,C,Average,Regular
+S1965,Meera Jain,20.0,Female,Commerce,81.0,,B,missing_marks,,,,Regular
+S1149,Sahil Saini,21.0,Male,Computer,94.0,,B,missing_marks,,,,High
+S1726,Arjun Rajput,20.0,Male,Commerce,77.0,,B,missing_marks,,,,Regular
+S1692,Neha Singh,,Female,Comm.,62.0,55.0,,ok,55.0,D,Below Average,Moderate
+S1485,Komal Malik,20.0,Female,Computer,82.0,83.0,B,ok,83.0,B,Good,Regular
+S1159,Komal Verma,18.0,Female,Art,94.0,51.0,D,ok,51.0,D,Below Average,High
+S1656,Sahil Verma,19.0,Male,Commerce,89.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1309,Kavya Malik,20.0,Female,Computer,70.0,79.0,B,ok,79.0,B,Good,Moderate
+S1672,Aarav Sharma,19.0,Male,Computer,87.0,70.0,B,ok,70.0,C,Average,Regular
+S1809,Nitin Gupta,19.0,Male,Management,87.0,68.0,C,ok,68.0,C,Average,Regular
+S1024,Pooja Tyagi,22.0,Female,Arts,76.0,63.0,C,ok,63.0,C,Average,Regular
+S1750,Ananya Pandey,20.0,Female,Computer,83.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1129,Pranav Rajput,20.0,Male,Commerce,100.0,65.0,C,ok,65.0,C,Average,High
+S1320,Ritika Rawat,20.0,Female,Science,86.0,61.0,C,ok,61.0,C,Average,Regular
+S1317,Ankit Yadav,20.0,Male,Science,65.0,66.0,C,ok,66.0,C,Average,Moderate
+S1431,Kavya Sharma,19.0,Female,Management,56.0,64.0,C,ok,64.0,C,Average,Low
+S1532,Meera Verma,20.0,Female,Science,61.0,50.0,D,ok,50.0,D,Below Average,Moderate
+S1616,,22.0,Male,Commerce,81.0,68.0,C,ok,68.0,C,Average,Regular
+S1250,Rohan Verma,19.0,Male,Computer,82.0,72.0,B,ok,72.0,C,Average,Regular
+S1669,Tarun Pandey,21.0,Male,Arts,100.0,,,missing_marks,,,,High
+S1016,Ankit Agarwal,22.0,Male,Management,91.0,71.0,B,ok,71.0,C,Average,High
+S1160,,23.0,Male,Computer,92.0,100.0,A,ok,100.0,A,Excellent,High
+S1458,Karan Ahmad,20.0,Male,Art,75.0,61.0,C,ok,61.0,C,Average,Regular
+S1049,Yash Saini,,Male,Commerce,88.0,63.0,C,ok,63.0,C,Average,Regular
+S1821,Harsh Malik,21.0,Male,Management,82.0,,C,missing_marks,,,,Regular
+S1483,Simran Mishra,19.0,Female,Arts,91.0,,D,missing_marks,,,,High
+S1779,Vikas Sharma,19.0,Male,Computer,84.0,85.0,A,ok,85.0,B,Good,Regular
+S1839,Shreya Verma,20.0,Female,Science,86.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1626,Muskan Sharma,21.0,Female,Computer,79.0,67.0,C,ok,67.0,C,Average,Regular
+ S1351 ,Anjali Rajput,19.0,Female,Science,68.0,61.0,C,ok,61.0,C,Average,Moderate
+S1128,Kunal Yadav,19.0,Male,Commerce,80.0,68.0,C,ok,68.0,C,Average,Regular
+S1463,Rahul Ahmad,18.0,Male,Arts,89.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1397,Sakshi Bansal,20.0,Female,Science,63.0,64.0,C,ok,64.0,C,Average,Moderate
+S1238,Simran Kumar,,Female,Arts,100.0,62.0,C,ok,62.0,C,Average,High
+S1168,Deepak Mishra,19.0,Male,Computer,76.0,83.0,B,ok,83.0,B,Good,Regular
+S1923,Rahul Saini,19.0,Male,Science,84.0,78.0,B,ok,78.0,B,Good,Regular
+S1453,Sneha Bansal,18.0,Female,Commerce,79.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1081,Rahul Kumar,19.0,Male,Arts,77.0,,,missing_marks,,,,Regular
+s1505,Kavya Bansal,21.0,Female,Arts,78.0,48.0,D,ok,48.0,D,Below Average,Regular
+S1992,Vivaan Yadav,21.0,Male,Commerce,92.0,81.0,b,ok,81.0,B,Good,High
+S1948,Pooja Mishra,20.0,Female,Computer,77.0,63.0,C,ok,63.0,C,Average,Regular
+S1031,Isha Yadav,20.0,Female,Science,53.0,69.0,C,ok,69.0,C,Average,Low
+S1243,Rahul Singh,20.0,Male,Management,75.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1937,Karan Rawat,21.0,Male,Computer,81.0,60.0,C,ok,60.0,C,Average,Regular
+S1748,Yash Gupta,22.0,Male,Management,74.0,72.0,B,ok,72.0,C,Average,Moderate
+S1325,Vikas Gupta,18.0,Male,Arts,68.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1940,Simran Saini,21.0,Female,Commerce,97.0,40.0,D,ok,40.0,D,Below Average,High
+S1768,Kunal Tyagi,19.0,Male,Commerce,87.0,60.0,C,ok,60.0,C,Average,Regular
+S1713,Gaurav Singh,20.0,Male,Arts,63.0,64.0,,ok,64.0,C,Average,Moderate
+S1028,Komal Jain,22.0,Female,Science,82.0,,d,missing_marks,,,,Regular
+S1358,Karan Gupta,20.0,Male,Computer,71.0,64.0,C,ok,64.0,C,Average,Moderate
+ S1123 ,Vivaan Tyagi,19.0,Male,Computer,89.0,64.0,C,ok,64.0,C,Average,Regular
+S1873,Rahul Mishra,,Male,Science,80.0,72.0,B,ok,72.0,C,Average,Regular
+S1946,Komal Rawat,22.0,Female,Commerce,89.0,60.0,C,ok,60.0,C,Average,Regular
+S1446,Deepak Kumar,19.0,Male,Science,78.0,61.0,C,ok,61.0,C,Average,Regular
+S1174,Karan Tyagi,20.0,Male,Science,84.0,87.0,C,ok,87.0,B,Good,Regular
+S1569,Karan Mishra,20.0,Male,Commerce,54.0,57.0,C,ok,57.0,D,Below Average,Low
+S1887,Vikas Mishra,19.0,Male,Commerce,72.0,78.0,B,ok,78.0,B,Good,Moderate
+S1272,Nitin Singh,19.0,Male,Comm.,79.0,65.0,C,ok,65.0,C,Average,Regular
+S1983,Aditya Malik,21.0,Male,Computer,69.0,79.0,B,ok,79.0,B,Good,Moderate
+S1278,Rahul Chauhan,20.0,Male,Management,80.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1856,Muskan Goel,21.0,Female,Comm.,79.0,71.0,B,ok,71.0,C,Average,Regular
+S1918,Anjali Khan,19.0,Female,Arts,84.0,,D,missing_marks,,,,Regular
+S1447,Harsh Sharma,19.0,Male,Computer,96.0,81.0,B,ok,81.0,B,Good,High
+S1464,Ananya Pandey,20.0,Female,Arts,74.0,69.0,C,ok,69.0,C,Average,Moderate
+S1749,Kavya Kumar,22.0,Female,Commerce,93.0,90.0,a,ok,90.0,A,Excellent,High
+S1148,Shreya Khan,20.0,Female,Computer,91.0,82.0,B,ok,82.0,B,Good,High
+S1300,Mohit Goel,19.0,Male,Computer,74.0,83.0,B,ok,83.0,B,Good,Moderate
+S1419,Divya Mishra,,Female,Management,92.0,52.0,D,ok,52.0,D,Below Average,High
+S1412,Neha Sharma,20.0,Female,Computer,82.0,62.0,C,ok,62.0,C,Average,Regular
+S1977,Ritika Kumar,20.0,Female,Management,100.0,79.0,B,ok,79.0,B,Good,High
+S1554,Isha Rawat,19.0,Female,Arts,76.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1052,Ritika Pandey,20.0,Female,Computer,69.0,77.0,B,ok,77.0,B,Good,Moderate
+S1888,Anjali Ahmad,21.0,Female,Science,88.0,53.0,D,ok,53.0,D,Below Average,Regular
+S1023,Manish Gupta,22.0,Male,Arts,100.0,68.0,C,ok,68.0,C,Average,High
+S1682,Muskan Yadav,22.0,Female,Commerce,100.0,65.0,C,ok,65.0,C,Average,High
+S1361,Sneha Verma,21.0,Female,Computer,82.0,76.0,B,ok,76.0,B,Good,Regular
+S1210,Kavya Bansal,21.0,Female,Commerce,72.0,50.0,D,ok,50.0,D,Below Average,Moderate
+S1042,Karan Khan,19.0,Male,Arts,90.0,79.0,D,ok,79.0,B,Good,High
+S1143,Shreya Malik,22.0,Female,Science,79.0,39.0,F,ok,39.0,F,Poor,Regular
+S1051,Divya Malik,19.0,Female,Science,90.0,76.0,B,ok,76.0,B,Good,High
+S1167,Simran Tyagi,19.0,Female,Science,70.0,58.0,C,ok,58.0,D,Below Average,Moderate
+s1674,Divya Singh,22.0,Female,Science,83.0,72.0,B,ok,72.0,C,Average,Regular
+S1572,Neha Jain,20.0,Female,Computer,68.0,82.0,B,ok,82.0,B,Good,Moderate
+S1082,Manish Yadav,19.0,Male,Computer,82.0,69.0,C,ok,69.0,C,Average,Regular
+S1404,Kunal Gupta,,Male,Management,82.0,44.0,D,ok,44.0,D,Below Average,Regular
+S1322,,21.0,Male,Science,79.0,60.0,C,ok,60.0,C,Average,Regular
+s1968,Priya Yadav,19.0,Female,Science,66.0,,C,missing_marks,,,,Moderate
+S1975,Aina Sharma,20.0,Female,Management,84.0,42.0,D,ok,42.0,D,Below Average,Regular
+S1432,Komal Gupta,19.0,Female,Computer,96.0,69.0,C,ok,69.0,C,Average,High
+S1067,Nisha Sharma,19.0,Female,Science,95.0,67.0,C,ok,67.0,C,Average,High
+S1335,Rahul Malik,20.0,Male,Management,83.0,34.0,,ok,34.0,F,Poor,Regular
+S1396,Muskan Goel,18.0,Female,Computer,78.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1884,Ananya Chauhan,19.0,Female,Arts,77.0,51.0,D,ok,51.0,D,Below Average,Regular
+S1290,Kunal Chauhan,19.0,Male,Management,92.0,,c,missing_marks,,,,High
+S1721,Aina Malik,19.0,Female,Science,73.0,59.0,C,ok,59.0,D,Below Average,Moderate
+S1643,Yash Saini,19.0,Male,Science,79.0,40.0,D,ok,40.0,D,Below Average,Regular
+S1284,Deepak Saini,19.0,Male,Management,80.0,64.0,C,ok,64.0,C,Average,Regular
+S1509,Vivaan Jain,19.0,Male,Commerce,100.0,68.0,C,ok,68.0,C,Average,High
+S1558,Anjali Gupta,20.0,Female,Science,71.0,72.0,B,ok,72.0,C,Average,Moderate
+S1065,Karan Sharma,18.0,Male,Science,76.0,67.0,C,ok,67.0,C,Average,Regular
+S1701,Shreya Jain,20.0,Female,Management,76.0,65.0,C,ok,65.0,C,Average,Regular
+S1265,Priya Mishra,19.0,Female,Arts,81.0,48.0,D,ok,48.0,D,Below Average,Regular
+S1456,Neha Khan,20.0,Female,Management,89.0,,B,missing_marks,,,,Regular
+S1586,Neha Rawat,19.0,Female,Commerce,64.0,,B,missing_marks,,,,Moderate
+S1771,Divya Singh,21.0,Female,Commerce,72.0,49.0,D,ok,49.0,D,Below Average,Moderate
+S1021,Anjali Agarwal,,Female,Management,77.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1814,Neha Pandey,21.0,Female,Arts,61.0,58.0,C,ok,58.0,D,Below Average,Moderate
+S1830,Meera Jain,18.0,Female,Commerce,100.0,94.0,,ok,94.0,A,Excellent,High
+ S1881 ,Riya Yadav,20.0,Female,Commerce,79.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1297,Yash Ahmad,22.0,Male,,90.0,67.0,C,ok,67.0,C,Average,High
+ S1508 ,Rahul Pandey,19.0,Male,Comm.,64.0,68.0,C,ok,68.0,C,Average,Moderate
+S1578,Priya Bansal,19.0,Female,Management,82.0,56.0,C,ok,56.0,D,Below Average,Regular
+ S1262 ,Simran Rajput,18.0,Female,Arts,68.0,,C,missing_marks,,,,Moderate
+S1545,Ankit Ahmad,18.0,Male,Commerce,87.0,71.0,B,ok,71.0,C,Average,Regular
+S1490,Priya Yadav,,Female,Computer,84.0,62.0,C,ok,62.0,C,Average,Regular
+S1901,Shreya Jain,19.0,Female,Arts,81.0,94.0,A,ok,94.0,A,Excellent,Regular
+S1494,Komal Malik,20.0,Female,Science,72.0,89.0,A,ok,89.0,B,Good,Moderate
+S1704,Shreya Saini,19.0,Female,Science,78.0,62.0,C,ok,62.0,C,Average,Regular
+S1998,Sneha Yadav,20.0,Female,Computer,75.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1189,Neha Mishra,19.0,Female,Computer,100.0,81.0,,ok,81.0,B,Good,High
+S1252,Arjun Chauhan,20.0,Male,Management,53.0,62.0,C,ok,62.0,C,Average,Low
+S1072,Divya Kumar,19.0,Female,Arts,81.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1102,Aina Saini,18.0,Female,Management,82.0,62.0,C,ok,62.0,C,Average,Regular
+S1443,Pooja Mishra,20.0,Female,Computer,82.0,,,missing_marks,,,,Regular
+S1410,Tanvi Singh,21.0,Female,Science,78.0,79.0,B,ok,79.0,B,Good,Regular
+S1427,Sahil Chauhan,19.0,Male,Arts,53.0,43.0,D,ok,43.0,D,Below Average,Low
+S1571,Tarun Goel,21.0,Male,Science,60.0,44.0,D,ok,44.0,D,Below Average,Moderate
+S1675,Nitin Saini,21.0,Male,Science,72.0,77.0,B,ok,77.0,B,Good,Moderate
+ S1813 ,Kunal Sharma,,Male,Arts,86.0,,B,missing_marks,,,,Regular
+S1898,Gaurav Yadav,20.0,Male,Science,76.0,,C,missing_marks,,,,Regular
+S1331,Aarav Singh,19.0,Male,Management,75.0,75.0,B,ok,75.0,B,Good,Regular
+S1460,Kunal Malik,18.0,Male,Commerce,77.0,56.0,c,ok,56.0,D,Below Average,Regular
+S1385,Sahil Jain,19.0,Male,Arts,81.0,39.0,B,ok,39.0,F,Poor,Regular
+s1987,Aina Ahmad,21.0,Female,Science,87.0,77.0,B,ok,77.0,B,Good,Regular
+S1366,Ankit Singh,20.0,Male,Commerce,72.0,,C,missing_marks,,,,Moderate
+S1282,Aina Verma,20.0,Female,Science,76.0,74.0,B,ok,74.0,C,Average,Regular
+S1875,Neha Mishra,21.0,Female,Computer,77.0,74.0,B,ok,74.0,C,Average,Regular
+S1565,Rohan Agarwal,19.0,Male,Science,69.0,72.0,B,ok,72.0,C,Average,Moderate
+S1971,Arjun Kumar,,Male,Management,82.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1735,Manish Sharma,22.0,Male,Comm.,67.0,46.0,D,ok,46.0,D,Below Average,Moderate
+S1472,Simran Ahmad,20.0,Female,Arts,81.0,67.0,C,ok,67.0,C,Average,Regular
+S1408,Gaurav Gupta,22.0,Male,Science,78.0,87.0,A,ok,87.0,B,Good,Regular
+S1208,Kavya Ahmad,23.0,Female,Science,74.0,66.0,C,ok,66.0,C,Average,Moderate
+S1807,Riya Jain,20.0,Female,Science,87.0,80.0,B,ok,80.0,B,Good,Regular
+S1240,Gaurav Verma,21.0,Male,Computer,68.0,,B,missing_marks,,,,Moderate
+S1566,Simran Khan,21.0,Female,Commerce,79.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1356,Sahil Kumar,,Male,Commerce,91.0,51.0,D,ok,51.0,D,Below Average,High
+S1570,Ankit Chauhan,19.0,Male,Management,73.0,,D,missing_marks,,,,Moderate
+S1193,Vikas Sharma,20.0,Male,Computer,69.0,83.0,B,ok,83.0,B,Good,Moderate
+S1281,Arjun Goel,21.0,Male,Commerce,85.0,32.0,f,ok,32.0,F,Poor,Regular
+S1192,Yash Rawat,21.0,Male,Arts,57.0,53.0,D,ok,53.0,D,Below Average,Low
+S1413,Anjali Saini,20.0,Female,Science,62.0,57.0,C,ok,57.0,D,Below Average,Moderate
+S1796,Gaurav Singh,20.0,Male,Commerce,89.0,45.0,D,ok,45.0,D,Below Average,Regular
+S1811,Sakshi Rajput,19.0,Female,Arts,85.0,81.0,B,ok,81.0,B,Good,Regular
+S1133,Deepak Mishra,19.0,Male,Commerce,94.0,89.0,A,ok,89.0,B,Good,High
+S1676,Tarun Rajput,21.0,Male,Commerce,95.0,74.0,,ok,74.0,C,Average,High
+S1436,Arjun Goel,,Male,Management,92.0,63.0,C,ok,63.0,C,Average,High
+S1253,Ananya Singh,18.0,Female,Computer,94.0,59.0,C,ok,59.0,D,Below Average,High
+S1862,Rahul Mishra,19.0,Male,Computer,82.0,81.0,B,ok,81.0,B,Good,Regular
+S1557,Nitin Chauhan,,Male,Management,83.0,73.0,B,ok,73.0,C,Average,Regular
+S1264,Sakshi Sharma,21.0,Female,Management,66.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1071,Arjun Bansal,22.0,Male,Commerce,70.0,44.0,A,ok,44.0,D,Below Average,Moderate
+S1273,Manish Jain,,Male,Management,57.0,58.0,C,ok,58.0,D,Below Average,Low
+S1113,Sahil Yadav,19.0,Male,Commerce,78.0,90.0,A,ok,90.0,A,Excellent,Regular
+S1328,Aina Kumar,19.0,Female,Science,84.0,,B,missing_marks,,,,Regular
+S1116,Vikas Singh,21.0,Male,Commerce,60.0,76.0,B,ok,76.0,B,Good,Moderate
+S1324,Komal Gupta,21.0,Female,Management,78.0,,B,missing_marks,,,,Regular
+S1719,Ananya Singh,19.0,Female,Computer,99.0,59.0,C,ok,59.0,D,Below Average,High
+S1474,Riya Singh,19.0,Female,Science,91.0,48.0,D,ok,48.0,D,Below Average,High
+S1678,Rahul Pandey,21.0,Male,Commerce,64.0,42.0,D,ok,42.0,D,Below Average,Moderate
+S1709,Shreya Kumar,22.0,Female,Science,64.0,41.0,D,ok,41.0,D,Below Average,Moderate
+S1835,Nisha Yadav,20.0,Female,Computer,84.0,73.0,b,ok,73.0,C,Average,Regular
+S1762,Simran Yadav,22.0,Female,Arts,81.0,62.0,C,ok,62.0,C,Average,Regular
+S1542,Rohan Yadav,20.0,Male,Computer,62.0,84.0,B,ok,84.0,B,Good,Moderate
+S1681,Mohit Sharma,19.0,Male,Science,85.0,88.0,A,ok,88.0,B,Good,Regular
+S1526,Mohit Verma,20.0,Male,Computer,82.0,78.0,B,ok,78.0,B,Good,Regular
+S1661,Deepak Kumar,,Male,Commerce,70.0,63.0,C,ok,63.0,C,Average,Moderate
+S1279,Simran Tyagi,19.0,Female,Science,78.0,65.0,C,ok,65.0,C,Average,Regular
+S1702,Aarav Malik,21.0,Male,Arts,80.0,50.0,,ok,50.0,D,Below Average,Regular
+s1003,Ananya Bansal,19.0,Female,Commerce,69.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1230,Neha Rajput,19.0,Female,Management,81.0,69.0,B,ok,69.0,C,Average,Regular
+S1512,Karan Kumar,19.0,Male,Commerce,71.0,56.0,C,ok,56.0,D,Below Average,Moderate
+S1877,Kavya Chauhan,20.0,Female,Arts,94.0,58.0,C,ok,58.0,D,Below Average,High
+S1925,Priya Verma,20.0,Female,Computer,95.0,59.0,C,ok,59.0,D,Below Average,High
+S1871,Yash Jain,19.0,Male,Computer,87.0,70.0,B,ok,70.0,C,Average,Regular
+S1200,Ankit Mishra,22.0,Male,Commerce,60.0,54.0,,ok,54.0,D,Below Average,Moderate
+S1372,Vikas Ahmad,21.0,Male,Commerce,72.0,62.0,C,ok,62.0,C,Average,Moderate
+S1927,Tanvi Malik,19.0,Female,Arts,83.0,60.0,C,ok,60.0,C,Average,Regular
+S1789,Meera Pandey,20.0,Female,Computer,79.0,60.0,C,ok,60.0,C,Average,Regular
+S1438,Muskan Rawat,19.0,Female,Computer,84.0,76.0,B,ok,76.0,B,Good,Regular
+S1663,Mohit Jain,21.0,Male,Science,70.0,74.0,B,ok,74.0,C,Average,Moderate
+S1066,Komal Chauhan,,Female,Science,87.0,70.0,B,ok,70.0,C,Average,Regular
+S1308,Anjali Rajput,18.0,Female,Arts,81.0,78.0,B,ok,78.0,B,Good,Regular
+S1041,Manish Saini,20.0,Male,Computer,94.0,57.0,C,ok,57.0,D,Below Average,High
+S1597,Mohit Mishra,18.0,Male,Arts,85.0,37.0,F,ok,37.0,F,Poor,Regular
+S1802,Manish Yadav,23.0,Male,Computer,67.0,79.0,B,ok,79.0,B,Good,Moderate
+S1818,Ritika Singh,19.0,Female,Management,82.0,73.0,B,ok,73.0,C,Average,Regular
+S1976,Tanvi Mishra,20.0,Female,Commerce,79.0,82.0,B,ok,82.0,B,Good,Regular
+S1755,Anjali Yadav,19.0,Female,Commerce,86.0,43.0,D,ok,43.0,D,Below Average,Regular
+S1874,Riya Tyagi,18.0,Female,Management,82.0,71.0,B,ok,71.0,C,Average,Regular
+S1610,Karan Malik,21.0,Male,Computer,92.0,100.0,A,ok,100.0,A,Excellent,High
+S1274,Tarun Agarwal,22.0,Male,Computer,79.0,86.0,A,ok,86.0,B,Good,Regular
+S1752,Vivaan Rajput,20.0,Male,Management,82.0,74.0,B,ok,74.0,C,Average,Regular
+S1680,Kavya Tyagi,20.0,Female,Arts,61.0,50.0,F,ok,50.0,D,Below Average,Moderate
+S1694,Divya Jain,19.0,Female,Commerce,65.0,,C,missing_marks,,,,Moderate
+S1956,Meera Tyagi,20.0,Female,Management,91.0,73.0,,ok,73.0,C,Average,High
+S1178,Muskan Khan,20.0,Female,Computer,79.0,73.0,B,ok,73.0,C,Average,Regular
+S1301,Aarav Gupta,22.0,Male,Comm.,78.0,87.0,a,ok,87.0,B,Good,Regular
+S1038,Kunal Saini,20.0,Male,Comm.,84.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1354,Mohit Saini,18.0,Male,Science,60.0,55.0,C,ok,55.0,D,Below Average,Moderate
+s1203,Kavya Ahmad,19.0,Female,Science,81.0,42.0,D,ok,42.0,D,Below Average,Regular
+S1707,Rohan Gupta,,Male,Computer,82.0,68.0,C,ok,68.0,C,Average,Regular
+S1237,Sahil Malik,19.0,Male,Science,59.0,53.0,D,ok,53.0,D,Below Average,Low
+S1150,Tarun Agarwal,18.0,Male,Arts,70.0,31.0,F,ok,31.0,F,Poor,Moderate
+S1732,Neha Jain,,,Science,69.0,79.0,B,ok,79.0,B,Good,Moderate
+S1448,Simran Singh,19.0,Female,Management,57.0,71.0,B,ok,71.0,C,Average,Low
+S1218,Anjali Agarwal,18.0,Female,Computer,69.0,,B,missing_marks,,,,Moderate
+S1730,Nisha Bansal,20.0,Female,Science,72.0,66.0,C,ok,66.0,C,Average,Moderate
+S1958,Anjali Gupta,20.0,Female,Computer,96.0,64.0,C,ok,64.0,C,Average,High
+S1790,Mohit Sharma,19.0,,Science,78.0,72.0,B,ok,72.0,C,Average,Regular
+S1660,Vivaan Goel,20.0,Male,Commerce,70.0,,D,missing_marks,,,,Moderate
+S1303,Vivaan Tyagi,19.0,Male,Management,63.0,46.0,D,ok,46.0,D,Below Average,Moderate
+S1994,Komal Kumar,19.0,Female,Science,78.0,71.0,B,ok,71.0,C,Average,Regular
+S1724,Rahul Bansal,21.0,Male,Computer,80.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1997,Divya Agarwal,19.0,Female,,94.0,72.0,B,ok,72.0,C,Average,High
+S1389,Ananya Yadav,20.0,Female,Management,82.0,17.0,,ok,17.0,F,Poor,Regular
+S1479,Manish Yadav,18.0,Male,Science,87.0,71.0,b,ok,71.0,C,Average,Regular
+S1500,Vivaan Saini,21.0,Male,Computer,82.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1423,Sahil Rawat,21.0,Male,Arts,85.0,53.0,D,ok,53.0,D,Below Average,Regular
+S1388,Kavya Singh,18.0,Female,Art,89.0,34.0,F,ok,34.0,F,Poor,Regular
+S1581,Rohan Agarwal,19.0,Male,Comm.,79.0,81.0,B,ok,81.0,B,Good,Regular
+S1391,Deepak Kumar,19.0,Male,Science,100.0,72.0,B,ok,72.0,C,Average,High
+S1816,Deepak Jain,21.0,Male,Management,67.0,75.0,B,ok,75.0,B,Good,Moderate
+S1353,Shreya Jain,19.0,Female,Computer,80.0,,B,missing_marks,,,,Regular
+S1194,Arjun Bansal,21.0,Male,Commerce,67.0,66.0,C,ok,66.0,C,Average,Moderate
+S1236,Harsh Gupta,21.0,Male,Science,69.0,82.0,B,ok,82.0,B,Good,Moderate
+S1777,Sakshi Jain,20.0,Female,Commerce,57.0,51.0,D,ok,51.0,D,Below Average,Low
+S1900,Rohan Ahmad,20.0,Male,Commerce,73.0,70.0,B,ok,70.0,C,Average,Moderate
+S1481,Rahul Saini,20.0,Male,Science,71.0,,C,missing_marks,,,,Moderate
+S1056,Nitin Singh,21.0,,Commerce,76.0,65.0,C,ok,65.0,C,Average,Regular
+S1117,Neha Verma,22.0,Female,Science,86.0,85.0,A,ok,85.0,B,Good,Regular
+S1097,Manish Yadav,19.0,Male,Commerce,77.0,67.0,C,ok,67.0,C,Average,Regular
+S1142,Manish Verma,20.0,Male,Management,76.0,48.0,D,ok,48.0,D,Below Average,Regular
+S1753,Kunal Ahmad,22.0,Male,Science,65.0,72.0,B,ok,72.0,C,Average,Moderate
+S1914,Rohan Mishra,20.0,,Commerce,85.0,65.0,C,ok,65.0,C,Average,Regular
+S1587,Priya Rawat,21.0,Female,Management,100.0,,D,missing_marks,,,,High
+S1604,Aarav Khan,21.0,Male,Management,85.0,82.0,B,ok,82.0,B,Good,Regular
+S1747,Rohan Pandey,19.0,Male,Commerce,84.0,76.0,B,ok,76.0,B,Good,Regular
+S1121,Pranav Yadav,19.0,Male,Management,84.0,74.0,B,ok,74.0,C,Average,Regular
+S1794,Priya Ahmad,21.0,Female,Management,82.0,69.0,C,ok,69.0,C,Average,Regular
+S1780,Mohit Gupta,,Male,Computer,98.0,73.0,B,ok,73.0,C,Average,High
+S1611,Isha Saini,19.0,Female,Science,82.0,64.0,C,ok,64.0,C,Average,Regular
+S1063,Tanvi Rajput,21.0,Female,Management,90.0,62.0,C,ok,62.0,C,Average,High
+S1710,Divya Jain,21.0,Female,Science,79.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1454,Deepak Khan,20.0,Male,Commerce,90.0,65.0,C,ok,65.0,C,Average,High
+S1516,Nisha Singh,18.0,Female,Art,69.0,50.0,d,ok,50.0,D,Below Average,Moderate
+S1224,Simran Mishra,20.0,Female,Science,78.0,65.0,C,ok,65.0,C,Average,Regular
+S1222,Nisha Chauhan,21.0,Female,Commerce,83.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1859,Nisha Ahmad,,Female,Management,100.0,70.0,B,ok,70.0,C,Average,High
+S1466,Meera Saini,,Female,Computer,81.0,85.0,A,ok,85.0,B,Good,Regular
+S1053,Komal Verma,19.0,Female,Commerce,79.0,64.0,C,ok,64.0,C,Average,Regular
+s1979,Pranav Singh,20.0,Male,Commerce,70.0,81.0,,ok,81.0,B,Good,Moderate
+S1716,Vikas Yadav,19.0,Male,Science,48.0,55.0,C,ok,55.0,D,Below Average,Low
+S1156,Tarun Kumar,20.0,Male,Management,82.0,39.0,F,ok,39.0,F,Poor,Regular
+S1714,Priya Khan,20.0,Female,Arts,83.0,48.0,d,ok,48.0,D,Below Average,Regular
+S1690,Priya Tyagi,19.0,Female,Arts,89.0,72.0,B,ok,72.0,C,Average,Regular
+S1249,Arjun Kumar,19.0,Male,Commerce,71.0,51.0,D,ok,51.0,D,Below Average,Moderate
+S1442,Pooja Tyagi,18.0,Female,Management,98.0,80.0,A,ok,80.0,B,Good,High
+S1118,Ananya Chauhan,20.0,Female,Management,98.0,34.0,F,ok,34.0,F,Poor,High
+S1844,Ritika Kumar,,Female,Arts,88.0,78.0,B,ok,78.0,B,Good,Regular
+S1733,Pooja Pandey,21.0,Female,Arts,77.0,57.0,c,ok,57.0,D,Below Average,Regular
+S1292,Rahul Goel,18.0,Male,Computer,95.0,60.0,C,ok,60.0,C,Average,High
+S1382,Neha Kumar,22.0,Female,Management,86.0,78.0,B,ok,78.0,B,Good,Regular
+S1644,Riya Mishra,18.0,Female,Management,84.0,,C,missing_marks,,,,Regular
+s1201,Yash Bansal,,Male,Commerce,79.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1769,Nitin Tyagi,22.0,Male,Commerce,100.0,,a,missing_marks,,,,High
+S1973,Pooja Goel,21.0,Female,Management,80.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1506,Divya Rajput,21.0,Female,Commerce,97.0,,C,missing_marks,,,,High
+S1822,Aditya Khan,19.0,Male,Computer,100.0,62.0,C,ok,62.0,C,Average,High
+S1341,Anjali Gupta,20.0,Female,Computer,85.0,85.0,A,ok,85.0,B,Good,Regular
+S1155,Vikas Agarwal,20.0,Male,Management,72.0,59.0,C,ok,59.0,D,Below Average,Moderate
+S1926,,21.0,Male,Computer,72.0,62.0,C,ok,62.0,C,Average,Moderate
+S1601,Aditya Saini,21.0,Male,Commerce,72.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1784,Anjali Agarwal,23.0,Female,Computer,100.0,84.0,B,ok,84.0,B,Good,High
+S1846,Shreya Rajput,20.0,Female,Management,82.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1323,Karan Malik,19.0,Male,Science,85.0,74.0,B,ok,74.0,C,Average,Regular
+S1650,Aina Bansal,,,Commerce,82.0,,A,missing_marks,,,,Regular
+S1631,Sahil Agarwal,22.0,Male,Computer,81.0,78.0,B,ok,78.0,B,Good,Regular
+S1628,Isha Verma,,Female,Commerce,89.0,70.0,B,ok,70.0,C,Average,Regular
+S1465,Anjali Malik,19.0,Female,Management,75.0,65.0,C,ok,65.0,C,Average,Regular
+S1595,Priya Bansal,21.0,Female,Computer,82.0,64.0,c,ok,64.0,C,Average,Regular
+S1334,Arjun Ahmad,19.0,Male,Management,71.0,68.0,C,ok,68.0,C,Average,Moderate
+S1011,Meera Singh,22.0,Female,Computer,81.0,53.0,D,ok,53.0,D,Below Average,Regular
+S1471,Priya Rajput,20.0,Female,Arts,81.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1033,Muskan Goel,21.0,Female,Management,89.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1619,Sahil Agarwal,19.0,Male,Science,85.0,66.0,C,ok,66.0,C,Average,Regular
+S1944,Komal Saini,20.0,Female,Computer,86.0,100.0,A,ok,100.0,A,Excellent,Regular
+S1383,Yash Verma,20.0,Male,Arts,96.0,56.0,C,ok,56.0,D,Below Average,High
+S1653,Kunal Saini,20.0,Male,Computer,86.0,83.0,B,ok,83.0,B,Good,Regular
+S1599,Ankit Mishra,22.0,Male,Commerce,81.0,60.0,C,ok,60.0,C,Average,Regular
+S1969,Vivaan Verma,19.0,Male,Commerce,76.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1985,Ritika Rawat,19.0,Female,Computer,82.0,79.0,B,ok,79.0,B,Good,Regular
+S1379,Vivaan Tyagi,19.0,Male,Computer,76.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1090,Pooja Mishra,22.0,Female,Management,72.0,59.0,C,ok,59.0,D,Below Average,Moderate
+S1214,Ritika Yadav,,Female,Commerce,79.0,,C,missing_marks,,,,Regular
+S1902,Vikas Pandey,19.0,Male,Arts,82.0,53.0,D,ok,53.0,D,Below Average,Regular
+S1134,Harsh Verma,,Male,Commerce,71.0,61.0,c,ok,61.0,C,Average,Moderate
+S1347,Sakshi Singh,20.0,Female,Arts,81.0,69.0,C,ok,69.0,C,Average,Regular
+S1677,Aina Mishra,19.0,Female,Computer,82.0,64.0,C,ok,64.0,C,Average,Regular
+S1008,Nisha Bansal,22.0,Female,Science,78.0,87.0,a,ok,87.0,B,Good,Regular
+S1665,Muskan Malik,20.0,Female,Management,55.0,,D,missing_marks,,,,Low
+S1321,Aarav Khan,20.0,Male,Art,89.0,51.0,D,ok,51.0,D,Below Average,Regular
+S1840,Pooja Rawat,20.0,Female,Computer,73.0,79.0,b,ok,79.0,B,Good,Moderate
+S1188,Gaurav Jain,19.0,Male,Arts,83.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1553,Ritika Malik,20.0,Female,Management,48.0,55.0,C,ok,55.0,D,Below Average,Low
+S1305,Karan Bansal,20.0,Male,Management,92.0,,A,missing_marks,,,,High
+S1032,Simran Verma,19.0,Female,Commerce,79.0,,C,missing_marks,,,,Regular
+S1659,Riya Tyagi,20.0,Female,Management,82.0,,B,missing_marks,,,,Regular
+S1241,Ritika Bansal,18.0,Female,Science,83.0,70.0,B,ok,70.0,C,Average,Regular
+S1782,Kunal Malik,19.0,Male,Arts,73.0,56.0,C,ok,56.0,D,Below Average,Moderate
+S1175,Muskan Bansal,20.0,Female,Arts,79.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1246,Sakshi Bansal,22.0,Female,Computer,65.0,66.0,C,ok,66.0,C,Average,Moderate
+S1057,Arjun Tyagi,18.0,Male,Commerce,100.0,,B,missing_marks,,,,High
+S1806,Rohan Rawat,19.0,Male,Commerce,63.0,49.0,D,ok,49.0,D,Below Average,Moderate
+S1146,Sakshi Jain,20.0,Female,Commerce,83.0,67.0,C,ok,67.0,C,Average,Regular
+S1091,Meera Sharma,21.0,Female,Management,82.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1393,Priya Pandey,18.0,Female,Commerce,86.0,,C,missing_marks,,,,Regular
+S1311,Nisha Singh,21.0,Female,Computer,97.0,,B,missing_marks,,,,High
+S1360,Mohit Rawat,19.0,Male,Computer,82.0,86.0,A,ok,86.0,B,Good,Regular
+S1094,Shreya Chauhan,19.0,Female,Science,73.0,70.0,B,ok,70.0,C,Average,Moderate
+S1745,Meera Verma,20.0,Female,Commerce,53.0,36.0,F,ok,36.0,F,Poor,Low
+S1805,Aditya Bansal,23.0,Male,Computer,85.0,48.0,,ok,48.0,D,Below Average,Regular
+S1377,Manish Malik,21.0,Male,Commerce,79.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1244,Vivaan Malik,21.0,Male,Computer,65.0,83.0,B,ok,83.0,B,Good,Moderate
+S1883,Komal Goel,19.0,Female,Computer,92.0,86.0,,ok,86.0,B,Good,High
+S1088,Aarav Chauhan,19.0,Male,Computer,46.0,90.0,A,ok,90.0,A,Excellent,Low
+S1215,Ritika Yadav,21.0,Female,Arts,100.0,67.0,C,ok,67.0,C,Average,High
+S1445,Pooja Khan,21.0,Female,Commerce,69.0,58.0,C,ok,58.0,D,Below Average,Moderate
+S1426,Anjali Pandey,19.0,Female,Science,94.0,62.0,C,ok,62.0,C,Average,High
+ S1831 ,Vikas Mishra,19.0,Male,Commerce,78.0,65.0,C,ok,65.0,C,Average,Regular
+S1119,Riya Gupta,,Female,Science,91.0,76.0,B,ok,76.0,B,Good,High
+S1120,Manish Yadav,19.0,Male,Science,86.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1988,Divya Gupta,20.0,Female,Management,80.0,78.0,B,ok,78.0,B,Good,Regular
+S1001,Pooja Agarwal,20.0,Female,Computer,82.0,65.0,C,ok,65.0,C,Average,Regular
+S1395,Komal Pandey,20.0,Female,Art,100.0,50.0,D,ok,50.0,D,Below Average,High
+S1402,Tanvi Mishra,20.0,Female,Commerce,62.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1405,Gaurav Kumar,21.0,Male,Commerce,68.0,73.0,B,ok,73.0,C,Average,Moderate
+S1664,Pooja Mishra,20.0,Female,Science,91.0,79.0,B,ok,79.0,B,Good,High
+S1959,Meera Ahmad,19.0,Female,Science,67.0,68.0,c,ok,68.0,C,Average,Moderate
+S1163,Komal Kumar,19.0,Female,Science,73.0,58.0,C,ok,58.0,D,Below Average,Moderate
+S1115,Tarun Saini,22.0,Male,Computer,87.0,100.0,A,ok,100.0,A,Excellent,Regular
+S1151,Tarun Agarwal,,Male,Commerce,84.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1633,Ankit Jain,19.0,Male,Computer,66.0,68.0,C,ok,68.0,C,Average,Moderate
+S1913,Kavya Agarwal,20.0,Female,Management,88.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1781,Nitin Singh,22.0,Male,Computer,90.0,70.0,B,ok,70.0,C,Average,High
+S1544,Shreya Kumar,19.0,Female,Arts,81.0,43.0,,ok,43.0,D,Below Average,Regular
+S1478,Komal Mishra,20.0,Female,Arts,74.0,68.0,C,ok,68.0,C,Average,Moderate
+ S1533 ,Tanvi Saini,19.0,Female,Science,96.0,58.0,C,ok,58.0,D,Below Average,High
+S1513,Aarav Jain,19.0,Male,Commerce,78.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1636,Tanvi Mishra,22.0,Female,Arts,93.0,68.0,B,ok,68.0,C,Average,High
+S1073,Komal Saini,22.0,Female,Arts,60.0,44.0,D,ok,44.0,D,Below Average,Moderate
+S1259,Ankit Agarwal,20.0,Male,Arts,81.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1625,Ankit Mishra,19.0,Male,Commerce,86.0,46.0,B,ok,46.0,D,Below Average,Regular
+S1908,Ritika Pandey,18.0,Female,Computer,82.0,91.0,A,ok,91.0,A,Excellent,Regular
+S1136,Simran Singh,21.0,Female,Commerce,86.0,70.0,B,ok,70.0,C,Average,Regular
+S1617,Vikas Ahmad,20.0,Male,Computer,75.0,61.0,c,ok,61.0,C,Average,Regular
+S1993,Simran Kumar,19.0,Female,Computer,82.0,88.0,A,ok,88.0,B,Good,Regular
+S1683,Pooja Khan,18.0,Female,Management,83.0,38.0,F,ok,38.0,F,Poor,Regular
+s1593,Aarav Mishra,19.0,Male,Science,76.0,,,missing_marks,,,,Regular
+S1854,Shreya Verma,21.0,Female,Management,55.0,34.0,F,ok,34.0,F,Poor,Low
+S1502,Karan Yadav,20.0,Male,Management,97.0,78.0,B,ok,78.0,B,Good,High
+S1539,Pranav Malik,20.0,Male,Science,70.0,67.0,C,ok,67.0,C,Average,Moderate
+s1703,Aditya Saini,21.0,Male,Science,69.0,63.0,C,ok,63.0,C,Average,Moderate
+S1582,Deepak Yadav,,Male,Commerce,81.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1344,Nisha Goel,20.0,Female,Computer,69.0,51.0,D,ok,51.0,D,Below Average,Moderate
+S1608,Arjun Verma,18.0,Male,Arts,80.0,73.0,B,ok,73.0,C,Average,Regular
+S1670,Ritika Tyagi,18.0,Female,Computer,83.0,65.0,C,ok,65.0,C,Average,Regular
+S1294,Kunal Malik,21.0,Male,Computer,69.0,65.0,C,ok,65.0,C,Average,Moderate
+S1365,Vivaan Agarwal,18.0,Male,Commerce,62.0,68.0,C,ok,68.0,C,Average,Moderate
+S1935,Sakshi Sharma,20.0,Female,Arts,70.0,44.0,D,ok,44.0,D,Below Average,Moderate
+S1015,Tarun Gupta,20.0,Male,Comm.,81.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1087,Harsh Sharma,19.0,Male,Science,83.0,61.0,C,ok,61.0,C,Average,Regular
+S1371,Divya Ahmad,21.0,Female,Management,62.0,56.0,C,ok,56.0,D,Below Average,Moderate
+S1166,Nisha Rajput,20.0,Female,Computer,82.0,85.0,A,ok,85.0,B,Good,Regular
+S1876,Aina Mishra,19.0,Female,Computer,75.0,80.0,B,ok,80.0,B,Good,Regular
+S1336,Komal Verma,,Female,Science,78.0,69.0,C,ok,69.0,C,Average,Regular
+S1060,Rahul Chauhan,20.0,Male,Art,81.0,49.0,D,ok,49.0,D,Below Average,Regular
+S1355,Nisha Mishra,19.0,Female,Science,83.0,80.0,B,ok,80.0,B,Good,Regular
+S1425,Kavya Mishra,23.0,Female,Commerce,81.0,65.0,C,ok,65.0,C,Average,Regular
+S1293,Riya Yadav,19.0,Female,Commerce,73.0,57.0,C,ok,57.0,D,Below Average,Moderate
+s1330,Muskan Mishra,22.0,Female,Commerce,100.0,63.0,C,ok,63.0,C,Average,High
+S1615,Rohan Singh,21.0,Male,Science,78.0,69.0,,ok,69.0,C,Average,Regular
+S1430,Divya Khan,,Female,Science,61.0,,,missing_marks,,,,Moderate
+S1080,Shreya Goel,20.0,Female,Computer,66.0,67.0,C,ok,67.0,C,Average,Moderate
+S1029,Kavya Goel,21.0,Female,Commerce,88.0,43.0,D,ok,43.0,D,Below Average,Regular
+S1255,Muskan Singh,19.0,,Arts,81.0,44.0,D,ok,44.0,D,Below Average,Regular
+S1459,Vivaan Rawat,18.0,Male,Computer,90.0,82.0,B,ok,82.0,B,Good,High
+s1384,Kavya Verma,19.0,Female,Computer,92.0,74.0,B,ok,74.0,C,Average,High
+S1314,Rohan Singh,20.0,Male,Arts,81.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1085,Neha Jain,19.0,Female,,74.0,64.0,C,ok,64.0,C,Average,Moderate
+S1575,Manish Pandey,19.0,Male,Commerce,72.0,,A,missing_marks,,,,Moderate
+S1137,Arjun Jain,20.0,Male,Comm.,71.0,64.0,C,ok,64.0,C,Average,Moderate
+S1112,Sneha Sharma,21.0,Female,Arts,93.0,69.0,C,ok,69.0,C,Average,High
+S1195,Ananya Sharma,19.0,Female,Computer,59.0,65.0,C,ok,65.0,C,Average,Low
+S1179,Ritika Sharma,19.0,Female,Management,80.0,47.0,D,ok,47.0,D,Below Average,Regular
+S1949,Aina Chauhan,19.0,Female,Science,96.0,61.0,,ok,61.0,C,Average,High
+S1497,Deepak Rajput,,Male,Science,84.0,68.0,C,ok,68.0,C,Average,Regular
+S1130,Nitin Goel,18.0,Male,Computer,48.0,80.0,B,ok,80.0,B,Good,Low
+S1338,Riya Ahmad,19.0,Female,Arts,87.0,88.0,A,ok,88.0,B,Good,Regular
+S1609,Muskan Bansal,20.0,Female,Computer,100.0,,C,missing_marks,,,,High
+S1125,Aarav Mishra,19.0,Male,Management,91.0,60.0,C,ok,60.0,C,Average,High
+S1227,Sahil Tyagi,20.0,Male,Arts,85.0,68.0,C,ok,68.0,C,Average,Regular
+S1269,Karan Rawat,20.0,Male,Science,77.0,83.0,B,ok,83.0,B,Good,Regular
+S1153,Rahul Singh,21.0,Male,Computer,75.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1585,Neha Singh,21.0,Female,Science,77.0,67.0,c,ok,67.0,C,Average,Regular
+S1104,Karan Ahmad,22.0,Male,Computer,98.0,66.0,C,ok,66.0,C,Average,High
+S1594,Rahul Pandey,20.0,,Arts,81.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1915,Sakshi Ahmad,18.0,,Management,73.0,93.0,A,ok,93.0,A,Excellent,Moderate
+S1228,Simran Saini,19.0,Female,Management,82.0,54.0,D,ok,54.0,D,Below Average,Regular
+S1980,Shreya Saini,20.0,Female,Management,85.0,45.0,D,ok,45.0,D,Below Average,Regular
+S1302,Komal Mishra,21.0,Female,Computer,77.0,73.0,B,ok,73.0,C,Average,Regular
+S1276,Aditya Singh,22.0,Male,Science,94.0,76.0,B,ok,76.0,B,Good,High
+S1127,Pooja Goel,19.0,Female,Science,78.0,67.0,C,ok,67.0,C,Average,Regular
+S1406,Kavya Singh,19.0,Female,Computer,82.0,36.0,F,ok,36.0,F,Poor,Regular
+S1684,Anjali Rawat,20.0,Female,Science,95.0,76.0,B,ok,76.0,B,Good,High
+S1953,Simran Pandey,20.0,Female,Commerce,83.0,61.0,C,ok,61.0,C,Average,Regular
+S1037,Simran Saini,20.0,Female,Commerce,100.0,71.0,B,ok,71.0,C,Average,High
+s1140,Aarav Rawat,20.0,Male,Science,84.0,78.0,B,ok,78.0,B,Good,Regular
+S1304,Rohan Gupta,20.0,Male,Commerce,72.0,59.0,D,ok,59.0,D,Below Average,Moderate
+S1268,Vivaan Kumar,19.0,Male,Computer,71.0,77.0,B,ok,77.0,B,Good,Moderate
+S1534,Vikas Agarwal,21.0,Male,Arts,71.0,89.0,A,ok,89.0,B,Good,Moderate
+S1546,Simran Gupta,23.0,Female,Arts,77.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1213,Harsh Sharma,19.0,Male,Management,85.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1469,Nisha Bansal,18.0,Female,Management,64.0,56.0,C,ok,56.0,D,Below Average,Moderate
+S1199,Vikas Sharma,19.0,Male,Science,78.0,94.0,A,ok,94.0,A,Excellent,Regular
+s1673,Priya Ahmad,19.0,Female,Science,68.0,71.0,B,ok,71.0,C,Average,Moderate
+S1528,Meera Malik,18.0,Female,Commerce,79.0,78.0,B,ok,78.0,B,Good,Regular
+S1850,Nitin Verma,19.0,Male,Arts,96.0,66.0,,ok,66.0,C,Average,High
+S1242,Muskan Singh,21.0,Female,Arts,67.0,44.0,D,ok,44.0,D,Below Average,Moderate
+S1343,Aditya Ahmad,21.0,Male,Computer,85.0,71.0,B,ok,71.0,C,Average,Regular
+S1550,Tarun Pandey,18.0,Male,Science,79.0,66.0,C,ok,66.0,C,Average,Regular
+S1387,Divya Mishra,19.0,Female,Arts,100.0,52.0,D,ok,52.0,D,Below Average,High
+S1921,Isha Malik,21.0,Female,Management,67.0,63.0,C,ok,63.0,C,Average,Moderate
+S1207,Rohan Gupta,19.0,Male,Management,78.0,61.0,C,ok,61.0,C,Average,Regular
+S1296,Aditya Bansal,21.0,Male,Science,98.0,75.0,B,ok,75.0,B,Good,High
+S1696,Anjali Yadav,21.0,Female,Commerce,80.0,34.0,F,ok,34.0,F,Poor,Regular
+S1826,Harsh Rawat,19.0,Male,Computer,75.0,62.0,C,ok,62.0,C,Average,Regular
+S1074,Gaurav Mishra,18.0,Male,Computer,88.0,80.0,B,ok,80.0,B,Good,Regular
+S1800,Priya Rajput,20.0,Female,Science,75.0,74.0,B,ok,74.0,C,Average,Regular
+S1105,Priya Rajput,21.0,Female,Computer,82.0,60.0,c,ok,60.0,C,Average,Regular
+S1741,Nitin Rawat,19.0,Male,Management,90.0,81.0,B,ok,81.0,B,Good,High
+S1951,Aarav Verma,22.0,Male,Management,88.0,68.0,C,ok,68.0,C,Average,Regular
+S1017,Pooja Malik,,Female,Science,70.0,27.0,F,ok,27.0,F,Poor,Moderate
+S1440,Tarun Bansal,19.0,Male,Arts,79.0,79.0,B,ok,79.0,B,Good,Regular
+S1092,Arjun Singh,22.0,Male,Management,61.0,63.0,C,ok,63.0,C,Average,Moderate
+S1089,Yash Malik,21.0,Male,Computer,79.0,73.0,B,ok,73.0,C,Average,Regular
+S1451,Pranav Tyagi,22.0,Male,Commerce,84.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1718,Aditya Sharma,,Male,Arts,84.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1103,Ankit Ahmad,21.0,Male,Management,80.0,67.0,C,ok,67.0,C,Average,Regular
+S1239,Sneha Kumar,21.0,,Science,87.0,87.0,A,ok,87.0,B,Good,Regular
+ S1776 ,Aina Rawat,19.0,Female,Computer,93.0,69.0,C,ok,69.0,C,Average,High
+S1247,Vikas Bansal,20.0,Male,Management,78.0,61.0,C,ok,61.0,C,Average,Regular
+ S1882 ,Karan Agarwal,20.0,,Science,93.0,71.0,B,ok,71.0,C,Average,High
+S1158,Deepak Ahmad,,Male,Computer,86.0,72.0,B,ok,72.0,C,Average,Regular
+S1480,Divya Tyagi,19.0,Female,Management,94.0,75.0,B,ok,75.0,B,Good,High
+S1646,Sakshi Yadav,22.0,Female,Management,87.0,64.0,C,ok,64.0,C,Average,Regular
+S1906,Anjali Malik,19.0,Female,Arts,81.0,40.0,D,ok,40.0,D,Below Average,Regular
+S1880,Arjun Jain,21.0,Male,Management,82.0,61.0,C,ok,61.0,C,Average,Regular
+S1019,Sakshi Khan,19.0,Female,Computer,89.0,84.0,B,ok,84.0,B,Good,Regular
+S1758,Ananya Saini,20.0,Female,Computer,57.0,51.0,D,ok,51.0,D,Below Average,Low
+S1122,Aina Malik,19.0,Female,Management,82.0,63.0,C,ok,63.0,C,Average,Regular
+S1984,Sahil Tyagi,21.0,Male,Management,77.0,87.0,C,ok,87.0,B,Good,Regular
+S1757,Gaurav Rajput,20.0,Male,Science,100.0,41.0,D,ok,41.0,D,Below Average,High
+S1275,Kunal Agarwal,19.0,Male,Commerce,74.0,69.0,C,ok,69.0,C,Average,Moderate
+S1434,Harsh Sharma,19.0,Male,Science,82.0,64.0,C,ok,64.0,C,Average,Regular
+S1961,Aina Tyagi,21.0,Female,Management,64.0,75.0,B,ok,75.0,B,Good,Moderate
+S1312,Muskan Tyagi,20.0,Female,Computer,82.0,61.0,C,ok,61.0,C,Average,Regular
+S1895,Manish Yadav,20.0,Male,Computer,95.0,91.0,A,ok,91.0,A,Excellent,High
+S1547,Meera Verma,,Female,Science,52.0,71.0,B,ok,71.0,C,Average,Low
+S1182,Shreya Yadav,18.0,Female,Arts,89.0,62.0,C,ok,62.0,C,Average,Regular
+S1185,Kavya Bansal,21.0,Female,Commerce,68.0,,B,missing_marks,,,,Moderate
+ S1407 ,Shreya Gupta,21.0,Female,Management,84.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1720,Kunal Pandey,22.0,Male,Arts,82.0,67.0,C,ok,67.0,C,Average,Regular
+S1607,Shreya Saini,20.0,Female,Art,81.5,61.0,c,ok,61.0,C,Average,Regular
+S1693,Riya Rajput,,Female,Management,84.0,69.0,C,ok,69.0,C,Average,Regular
+S1521,Kunal Tyagi,19.0,Male,Commerce,79.0,79.0,B,ok,79.0,B,Good,Regular
+S1381,Vivaan Sharma,20.0,Male,Management,96.0,76.0,B,ok,76.0,B,Good,High
+S1411,Vivaan Mishra,19.0,Male,Comm.,79.0,60.0,C,ok,60.0,C,Average,Regular
+S1635,Mohit Malik,20.0,Male,Computer,83.0,80.0,B,ok,80.0,B,Good,Regular
+S1370,Muskan Mishra,19.0,Female,Computer,63.0,91.0,A,ok,91.0,A,Excellent,Moderate
+ S1893 ,Shreya Ahmad,21.0,Female,Computer,84.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1808,Aarav Saini,18.0,Male,Management,91.0,50.0,D,ok,50.0,D,Below Average,High
+S1079,Shreya Singh,20.0,Female,Commerce,86.0,68.0,C,ok,68.0,C,Average,Regular
+S1574,Komal Singh,22.0,Female,Arts,60.0,46.0,D,ok,46.0,D,Below Average,Moderate
+S1266,Tanvi Ahmad,20.0,Female,Comm.,85.0,62.0,C,ok,62.0,C,Average,Regular
+S1638,Mohit Ahmad,19.0,Male,Science,81.0,,B,missing_marks,,,,Regular
+S1869,Neha Sharma,23.0,Female,Commerce,56.0,67.0,C,ok,67.0,C,Average,Low
+S1069,Isha Ahmad,20.0,Female,,79.0,63.0,C,ok,63.0,C,Average,Regular
+S1891,Rohan Rajput,18.0,Male,Computer,93.0,75.0,B,ok,75.0,B,Good,High
+S1991,Mohit Tyagi,20.0,Male,Computer,81.0,79.0,B,ok,79.0,B,Good,Regular
+S1417,Sahil Saini,,Male,Computer,85.0,94.0,A,ok,94.0,A,Excellent,Regular
+S1797,Komal Singh,19.0,Female,Computer,60.0,61.0,C,ok,61.0,C,Average,Moderate
+S1562,Nitin Pandey,21.0,Male,Computer,62.0,61.0,C,ok,61.0,C,Average,Moderate
+S1068,Vivaan Chauhan,19.0,Male,Commerce,92.0,66.0,C,ok,66.0,C,Average,High
+S1537,Anjali Agarwal,22.0,Female,Commerce,67.0,40.0,D,ok,40.0,D,Below Average,Moderate
+S1078,Kavya Yadav,19.0,Female,Management,68.0,59.0,C,ok,59.0,D,Below Average,Moderate
+S1106,Sahil Saini,20.0,Male,Arts,68.0,41.0,D,ok,41.0,D,Below Average,Moderate
+S1837,Riya Gupta,20.0,Female,Management,87.0,70.0,B,ok,70.0,C,Average,Regular
+S1639,Nisha Pandey,21.0,Female,,92.0,73.0,B,ok,73.0,C,Average,High
+S1560,Harsh Singh,19.0,Male,Arts,65.0,59.0,C,ok,59.0,D,Below Average,Moderate
+s1815,Ritika Chauhan,19.0,Female,Computer,86.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1691,Sahil Verma,,Male,Science,75.0,,F,missing_marks,,,,Regular
+S1930,Ankit Tyagi,20.0,Male,Computer,82.0,66.0,C,ok,66.0,C,Average,Regular
+S1736,Divya Bansal,20.0,Female,Commerce,65.0,86.0,A,ok,86.0,B,Good,Moderate
+S1834,Riya Gupta,,Female,Management,100.0,56.0,C,ok,56.0,D,Below Average,High
+S1491,Tanvi Singh,20.0,Female,Management,82.0,56.0,c,ok,56.0,D,Below Average,Regular
+S1666,Simran Malik,19.0,Female,Management,88.0,31.0,D,ok,31.0,F,Poor,Regular
+S1904,Ankit Pandey,19.0,Male,Computer,73.0,90.0,A,ok,90.0,A,Excellent,Moderate
+S1606,Arjun Mishra,21.0,Male,Computer,88.0,77.0,B,ok,77.0,B,Good,Regular
+S1364,Kavya Agarwal,19.0,Female,Computer,82.0,76.0,B,ok,76.0,B,Good,Regular
+S1070,Priya Saini,19.0,Female,Computer,72.0,74.0,b,ok,74.0,C,Average,Moderate
+S1549,Aina Singh,21.0,Female,Computer,68.0,61.0,C,ok,61.0,C,Average,Moderate
+S1161,Shreya Khan,20.0,Female,Commerce,90.0,71.0,B,ok,71.0,C,Average,High
+S1012,Divya Jain,20.0,Female,Arts,81.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1145,Sneha Sharma,20.0,Female,Commerce,60.0,69.0,C,ok,69.0,C,Average,Moderate
+S1518,,20.0,Male,Computer,82.0,88.0,A,ok,88.0,B,Good,Regular
+S1428,Priya Yadav,20.0,Female,Computer,71.0,61.0,C,ok,61.0,C,Average,Moderate
+S1640,Neha Yadav,19.0,Female,Science,78.0,79.0,B,ok,79.0,B,Good,Regular
+S1177,Aarav Goel,20.0,Male,Commerce,85.0,,B,missing_marks,,,,Regular
+ S1441 ,Sahil Rajput,22.0,Male,Management,69.0,54.0,,ok,54.0,D,Below Average,Moderate
+S1522,Mohit Rajput,20.0,Male,Computer,100.0,77.0,B,ok,77.0,B,Good,High
+S1933,Aina Kumar,,Female,Commerce,72.0,73.0,B,ok,73.0,C,Average,Moderate
+S1689,Meera Jain,20.0,Female,Science,76.0,61.0,c,ok,61.0,C,Average,Regular
+S1232,Manish Goel,21.0,Male,Computer,86.0,80.0,,ok,80.0,B,Good,Regular
+S1211,Isha Gupta,21.0,Female,Comm.,84.0,44.0,D,ok,44.0,D,Below Average,Regular
+S1641,Tanvi Tyagi,19.0,Female,Computer,65.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1144,Meera Sharma,21.0,Female,Science,73.0,54.0,D,ok,54.0,D,Below Average,Moderate
+S1754,Meera Rawat,22.0,Female,Arts,95.0,55.0,C,ok,55.0,D,Below Average,High
+S1520,Isha Rajput,20.0,Female,Science,73.0,66.0,C,ok,66.0,C,Average,Moderate
+S1349,,20.0,Female,Arts,82.0,,B,missing_marks,,,,Regular
+S1299,Nisha Ahmad,,Female,Arts,86.0,68.0,C,ok,68.0,C,Average,Regular
+S1823,Ananya Khan,21.0,Female,Management,74.0,63.0,,ok,63.0,C,Average,Moderate
+S1767,Divya Goel,19.0,Female,Commerce,68.0,43.0,D,ok,43.0,D,Below Average,Moderate
+S1429,Nisha Jain,22.0,Female,Management,75.0,31.0,F,ok,31.0,F,Poor,Regular
+S1613,Isha Mishra,18.0,Female,Arts,89.0,63.0,C,ok,63.0,C,Average,Regular
+S1996,Ankit Saini,19.0,Male,Arts,81.0,45.0,D,ok,45.0,D,Below Average,Regular
+S1009,Arjun Bansal,19.0,Male,Management,94.0,50.0,D,ok,50.0,D,Below Average,High
+S1157,Riya Kumar,20.0,Female,Computer,89.0,81.0,B,ok,81.0,B,Good,Regular
+S1540,Arjun Jain,19.0,Male,Management,73.0,52.0,D,ok,52.0,D,Below Average,Moderate
+S1507,Ankit Singh,,Male,Commerce,75.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1437,Aina Sharma,22.0,Female,Arts,74.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1267,Simran Bansal,20.0,Female,Management,84.0,37.0,F,ok,37.0,F,Poor,Regular
+S1827,Gaurav Bansal,20.0,Male,Science,95.0,82.0,B,ok,82.0,B,Good,High
+S1462,Arjun Tyagi,21.0,Male,Computer,80.0,74.0,B,ok,74.0,C,Average,Regular
+S1577,Mohit Khan,18.0,Male,Arts,79.0,72.0,B,ok,72.0,C,Average,Regular
+S1339,Riya Singh,,Female,Arts,92.0,73.0,B,ok,73.0,C,Average,High
+S1256,Karan Gupta,19.0,Male,Commerce,79.0,51.0,D,ok,51.0,D,Below Average,Regular
+S1861,Riya Ahmad,21.0,Female,Management,92.0,57.0,C,ok,57.0,D,Below Average,High
+S1561,Priya Tyagi,,Female,Management,70.0,,C,missing_marks,,,,Moderate
+S1209,Aina Mishra,22.0,Female,Management,75.0,44.0,D,ok,44.0,D,Below Average,Regular
+S1288,Rohan Agarwal,19.0,Male,Commerce,98.0,75.0,B,ok,75.0,B,Good,High
+S1002,Kunal Yadav,18.0,Male,Management,72.0,,C,missing_marks,,,,Moderate
+S1342,Ritika Ahmad,23.0,Female,Arts,85.0,77.0,B,ok,77.0,B,Good,Regular
+S1270,Vivaan Yadav,23.0,Male,Arts,65.0,57.0,C,ok,57.0,D,Below Average,Moderate
+S1872,Pooja Tyagi,20.0,Female,Computer,95.0,79.0,B,ok,79.0,B,Good,High
+S1879,Sneha Singh,20.0,Female,Management,100.0,58.0,C,ok,58.0,D,Below Average,High
+S1096,Ritika Mishra,20.0,Female,Science,93.0,69.0,C,ok,69.0,C,Average,High
+S1043,Komal Ahmad,20.0,Female,Computer,83.0,67.0,C,ok,67.0,C,Average,Regular
+s1860,Anjali Yadav,19.0,Female,Management,82.0,42.0,,ok,42.0,D,Below Average,Regular
+S1399,Priya Saini,20.0,Female,Science,53.0,49.0,D,ok,49.0,D,Below Average,Low
+S1894,Priya Sharma,18.0,Female,Arts,81.0,65.0,C,ok,65.0,C,Average,Regular
+S1629,Pooja Jain,19.0,Female,Commerce,94.0,84.0,b,ok,84.0,B,Good,High
+S1046,Nisha Ahmad,20.0,Female,Management,71.0,59.0,C,ok,59.0,D,Below Average,Moderate
+S1162,Riya Rawat,21.0,Female,Science,91.0,61.0,C,ok,61.0,C,Average,High
+S1728,Simran Goel,20.0,Female,Science,84.0,,B,missing_marks,,,,Regular
+S1630,Simran Jain,19.0,Female,Computer,98.0,53.0,D,ok,53.0,D,Below Average,High
+S1289,Pooja Sharma,20.0,Female,Arts,76.0,,C,missing_marks,,,,Regular
+S1590,Riya Malik,19.0,Female,Computer,95.0,86.0,A,ok,86.0,B,Good,High
+S1957,Kunal Malik,,Male,Computer,68.0,68.0,C,ok,68.0,C,Average,Moderate
+S1576,Komal Bansal,19.0,Female,Arts,82.0,51.0,,ok,51.0,D,Below Average,Regular
+S1851,Deepak Verma,21.0,Male,Management,57.0,50.0,D,ok,50.0,D,Below Average,Low
+s1316,Kavya Verma,21.0,Female,Science,78.0,53.0,D,ok,53.0,D,Below Average,Regular
+S1954,Shreya Chauhan,21.0,Female,Comm.,68.0,66.0,c,ok,66.0,C,Average,Moderate
+s1231,Ritika Singh,20.0,Female,Commerce,77.0,53.0,D,ok,53.0,D,Below Average,Regular
+S1810,Vivaan Jain,18.0,Male,Science,91.0,69.0,C,ok,69.0,C,Average,High
+S1699,Aarav Mishra,20.0,Male,Computer,82.0,60.0,,ok,60.0,C,Average,Regular
+S1886,Neha Gupta,20.0,Female,Science,67.0,64.0,C,ok,64.0,C,Average,Moderate
+S1712,Mohit Yadav,19.0,Male,Arts,60.0,79.0,B,ok,79.0,B,Good,Moderate
+S1077,Kunal Verma,21.0,Male,Management,80.0,66.0,C,ok,66.0,C,Average,Regular
+S1634,Deepak Rajput,21.0,Male,Computer,69.0,75.0,b,ok,75.0,B,Good,Moderate
+S1248,Muskan Bansal,23.0,Female,Commerce,68.0,62.0,C,ok,62.0,C,Average,Moderate
+S1820,Pranav Gupta,,Male,Science,83.0,65.0,C,ok,65.0,C,Average,Regular
+S1825,Aina Agarwal,19.0,Female,Management,84.0,41.0,D,ok,41.0,D,Below Average,Regular
+S1477,Tanvi Khan,21.0,Female,Commerce,86.0,65.0,C,ok,65.0,C,Average,Regular
+S1671,Aarav Khan,19.0,Male,Science,78.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1086,Nisha Agarwal,19.0,Female,Commerce,70.0,67.0,c,ok,67.0,C,Average,Moderate
+S1470,Kavya Agarwal,19.0,Female,Computer,68.0,76.0,B,ok,76.0,B,Good,Moderate
+S1226,Pooja Ahmad,21.0,Female,Arts,81.0,60.0,C,ok,60.0,C,Average,Regular
+S1889,Isha Yadav,19.0,Female,Management,81.0,51.0,D,ok,51.0,D,Below Average,Regular
+S1775,Pranav Bansal,19.0,Male,Science,78.0,74.0,b,ok,74.0,C,Average,Regular
+S1332,Ritika Goel,23.0,Female,Arts,81.0,43.0,D,ok,43.0,D,Below Average,Regular
+S1234,Yash Sharma,18.0,Male,Computer,69.0,39.0,f,ok,39.0,F,Poor,Moderate
+S1589,Rahul Tyagi,22.0,Male,Art,62.0,63.0,C,ok,63.0,C,Average,Moderate
+S1476,Nisha Verma,19.0,Female,Science,98.0,70.0,B,ok,70.0,C,Average,High
+S1974,,,Female,Computer,69.0,62.0,C,ok,62.0,C,Average,Moderate
+S1934,Sahil Goel,20.0,,Science,77.0,74.0,B,ok,74.0,C,Average,Regular
+S1600,Isha Singh,19.0,Female,Computer,82.0,66.0,C,ok,66.0,C,Average,Regular
+S1422,Yash Chauhan,21.0,Male,Commerce,100.0,46.0,D,ok,46.0,D,Below Average,High
+S1688,Meera Kumar,18.0,Female,Arts,81.0,71.0,B,ok,71.0,C,Average,Regular
+S1183,Rahul Khan,21.0,Male,Science,84.0,79.0,B,ok,79.0,B,Good,Regular
+S1618,Nitin Malik,21.0,Male,Commerce,67.0,49.0,D,ok,49.0,D,Below Average,Moderate
+S1333,Anjali Pandey,19.0,Female,Arts,74.0,45.0,D,ok,45.0,D,Below Average,Moderate
+S1439,Yash Jain,20.0,Male,Arts,70.0,33.0,F,ok,33.0,F,Poor,Moderate
+S1050,Ankit Kumar,19.0,Male,Commerce,87.0,77.0,B,ok,77.0,B,Good,Regular
+S1006,Rohan Bansal,20.0,Male,Commerce,69.0,72.0,B,ok,72.0,C,Average,Moderate
+S1530,Priya Sharma,21.0,Female,Management,94.0,68.0,C,ok,68.0,C,Average,High
+S1235,Neha Ahmad,20.0,Female,Commerce,99.0,72.0,B,ok,72.0,C,Average,High
+S1487,Pooja Ahmad,21.0,Female,Computer,82.0,48.0,D,ok,48.0,D,Below Average,Regular
+S1970,Simran Verma,19.0,Female,Science,75.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1885,Arjun Chauhan,18.0,Male,Science,75.0,48.0,D,ok,48.0,D,Below Average,Regular
+S1964,Meera Jain,19.0,Female,Commerce,93.0,73.0,B,ok,73.0,C,Average,High
+ S1107 ,Rohan Verma,19.0,Male,Arts,81.0,,C,missing_marks,,,,Regular
+S1444,Vivaan Rajput,20.0,Male,Art,82.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1489,Neha Verma,19.0,Female,Computer,78.0,68.0,,ok,68.0,C,Average,Regular
+S1647,Tanvi Mishra,18.0,Female,,80.0,57.0,C,ok,57.0,D,Below Average,Regular
+S1013,Nitin Kumar,20.0,Male,Computer,82.0,,b,missing_marks,,,,Regular
+S1739,Tanvi Gupta,19.0,Female,Management,68.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1727,Manish Rawat,20.0,Male,Commerce,79.0,65.0,C,ok,65.0,C,Average,Regular
+S1191,Divya Rawat,20.0,Female,Computer,64.0,89.0,A,ok,89.0,B,Good,Moderate
+S1833,Nisha Mishra,20.0,Female,Commerce,84.0,40.0,D,ok,40.0,D,Below Average,Regular
+S1283,Yash Saini,19.0,Male,Computer,86.0,84.0,B,ok,84.0,B,Good,Regular
+S1030,Rahul Ahmad,,Male,Computer,100.0,73.0,,ok,73.0,C,Average,High
+S1170,Meera Ahmad,19.0,Female,Computer,86.0,78.0,B,ok,78.0,B,Good,Regular
+S1181,Isha Singh,19.0,Female,Arts,72.0,39.0,F,ok,39.0,F,Poor,Moderate
+S1101,Arjun Tyagi,21.0,Male,Management,69.0,67.0,C,ok,67.0,C,Average,Moderate
+S1198,Ritika Gupta,20.0,Female,Science,78.0,88.0,A,ok,88.0,B,Good,Regular
+S1496,Nisha Kumar,21.0,Female,Commerce,79.0,77.0,B,ok,77.0,B,Good,Regular
+S1722,Kunal Pandey,18.0,Male,Computer,88.0,,D,missing_marks,,,,Regular
+S1045,Deepak Rawat,20.0,Male,Arts,74.0,52.0,A,ok,52.0,D,Below Average,Moderate
+S1711,Tarun Bansal,,Male,Arts,92.0,68.0,C,ok,68.0,C,Average,High
+S1374,Aditya Jain,19.0,Male,Computer,83.0,81.0,B,ok,81.0,B,Good,Regular
+S1679,Sakshi Malik,19.0,Female,Comm.,88.0,62.0,C,ok,62.0,C,Average,Regular
+S1649,Isha Mishra,22.0,Female,Science,87.0,70.0,b,ok,70.0,C,Average,Regular
+ S1798 ,Kunal Agarwal,19.0,Male,Commerce,64.0,67.0,C,ok,67.0,C,Average,Moderate
+S1848,Deepak Rawat,20.0,Male,Science,78.0,63.0,C,ok,63.0,C,Average,Regular
+S1461,Kunal Jain,21.0,Male,Computer,75.0,75.0,B,ok,75.0,B,Good,Regular
+S1909,Yash Tyagi,21.0,Male,Management,82.0,60.0,C,ok,60.0,C,Average,Regular
+S1414,Nisha Sharma,18.0,Female,Commerce,66.0,61.0,C,ok,61.0,C,Average,Moderate
+S1132,Sahil Chauhan,19.0,Male,Science,78.0,78.0,B,ok,78.0,B,Good,Regular
+S1040,Vivaan Jain,21.0,Male,Arts,86.0,46.0,D,ok,46.0,D,Below Average,Regular
+S1435,Anjali Goel,20.0,Female,Science,78.0,92.0,A,ok,92.0,A,Excellent,Regular
+S1216,Komal Rawat,20.0,Female,Management,85.0,82.0,B,ok,82.0,B,Good,Regular
+S1556,Sahil Singh,20.0,Male,Management,82.0,50.0,D,ok,50.0,D,Below Average,Regular
+S1567,Pooja Yadav,19.0,Female,Computer,82.0,68.0,C,ok,68.0,C,Average,Regular
+S1763,Nisha Rawat,20.0,Female,Management,84.0,61.0,C,ok,61.0,C,Average,Regular
+S1475,Vikas Saini,21.0,Male,Management,89.0,71.0,B,ok,71.0,C,Average,Regular
+S1457,Divya Singh,20.0,Female,Commerce,85.0,45.0,D,ok,45.0,D,Below Average,Regular
+S1812,Yash Jain,,Male,Arts,97.0,,C,missing_marks,,,,High
+S1261,Sahil Saini,21.0,Male,Arts,100.0,92.0,A,ok,92.0,A,Excellent,High
+S1817,Mohit Malik,20.0,Male,Science,68.0,48.0,D,ok,48.0,D,Below Average,Moderate
+S1036,Aarav Saini,20.0,Male,Management,82.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1828,Mohit Kumar,20.0,Male,Arts,81.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1912,Harsh Chauhan,19.0,Male,Science,87.0,96.0,A,ok,96.0,A,Excellent,Regular
+S1310,Harsh Malik,19.0,Male,Computer,82.0,83.0,b,ok,83.0,B,Good,Regular
+S1277,Vivaan Tyagi,21.0,Male,Management,86.0,65.0,C,ok,65.0,C,Average,Regular
+S1637,Sneha Bansal,20.0,Female,Management,100.0,86.0,A,ok,86.0,B,Good,High
+S1655,Nitin Malik,18.0,Male,Management,85.0,59.0,C,ok,59.0,D,Below Average,Regular
+S1623,Nisha Khan,21.0,Female,Science,76.0,78.0,B,ok,78.0,B,Good,Regular
+S1836,Aina Malik,20.0,Female,Management,75.0,80.0,B,ok,80.0,B,Good,Regular
+S1845,Nitin Ahmad,19.0,Male,Arts,82.0,41.0,D,ok,41.0,D,Below Average,Regular
+S1394,Aina Pandey,21.0,Female,Science,68.0,57.0,C,ok,57.0,D,Below Average,Moderate
+S1108,Aarav Rajput,19.0,Male,Management,78.0,72.0,,ok,72.0,C,Average,Regular
+S1525,Arjun Bansal,,Male,Commerce,63.0,46.0,D,ok,46.0,D,Below Average,Moderate
+S1785,Neha Tyagi,20.0,Female,Management,82.0,73.0,B,ok,73.0,C,Average,Regular
+S1048,Priya Mishra,20.0,Female,Commerce,70.0,41.0,d,ok,41.0,D,Below Average,Moderate
+S1955,Pranav Chauhan,19.0,Male,Computer,92.0,67.0,C,ok,67.0,C,Average,High
+S1204,Karan Mishra,21.0,Male,Arts,73.0,56.0,C,ok,56.0,D,Below Average,Moderate
+S1999,Tarun Gupta,19.0,Male,Commerce,97.0,81.0,B,ok,81.0,B,Good,High
+S1632,Ankit Jain,19.0,Male,Management,80.0,63.0,C,ok,63.0,C,Average,Regular
+S1022,Rahul Pandey,19.0,Male,Science,76.0,62.0,C,ok,62.0,C,Average,Regular
+S1403,Vikas Verma,21.0,Male,Commerce,90.0,53.0,D,ok,53.0,D,Below Average,High
+S1947,Pooja Bansal,20.0,Female,Science,74.0,60.0,C,ok,60.0,C,Average,Moderate
+S1084,Arjun Bansal,18.0,Male,Arts,79.0,71.0,B,ok,71.0,C,Average,Regular
+S1131,Riya Mishra,19.0,Female,Management,82.0,45.0,D,ok,45.0,D,Below Average,Regular
+S1416,Deepak Agarwal,19.0,Male,Arts,69.0,,C,missing_marks,,,,Moderate
+S1896,Nisha Tyagi,20.0,Female,Science,82.0,63.0,,ok,63.0,C,Average,Regular
+S1978,,20.0,Male,Science,67.0,63.0,C,ok,63.0,C,Average,Moderate
+S1842,Isha Mishra,19.0,Female,Management,94.0,,A,missing_marks,,,,High
+S1742,Arjun Yadav,19.0,Male,Commerce,85.0,72.0,B,ok,72.0,C,Average,Regular
+S1698,Tarun Rawat,19.0,Male,Science,73.0,47.0,D,ok,47.0,D,Below Average,Moderate
+S1287,Nitin Yadav,22.0,Male,Management,100.0,64.0,C,ok,64.0,C,Average,High
+S1124,Divya Goel,18.0,Female,Science,89.0,63.0,C,ok,63.0,C,Average,Regular
+S1034,Rohan Agarwal,21.0,Male,Commerce,73.0,63.0,C,ok,63.0,C,Average,Moderate
+S1788,Gaurav Gupta,19.0,Male,Arts,75.0,56.0,C,ok,56.0,D,Below Average,Regular
+S1517,Vikas Bansal,21.0,Male,Computer,68.0,,B,missing_marks,,,,Moderate
+S1924,Tanvi Singh,20.0,Female,Commerce,82.0,60.0,C,ok,60.0,C,Average,Regular
+S1020,Pooja Ahmad,22.0,Female,Computer,57.0,71.0,B,ok,71.0,C,Average,Low
+S2000,Simran Verma,20.0,Female,Art,81.5,72.0,B,ok,72.0,C,Average,Regular
+S1220,Ankit Pandey,19.0,Male,Comm.,84.0,62.0,,ok,62.0,C,Average,Regular
+S1892,Sakshi Pandey,21.0,Female,Computer,97.0,87.0,A,ok,87.0,B,Good,High
+S1482,Deepak Agarwal,19.0,Male,Science,78.0,67.0,C,ok,67.0,C,Average,Regular
+S1932,Rohan Goel,20.0,Male,Science,100.0,79.0,B,ok,79.0,B,Good,High
+S1357,Muskan Pandey,20.0,Female,Science,68.0,60.0,c,ok,60.0,C,Average,Moderate
+S1662,Vikas Verma,22.0,Male,Commerce,68.0,57.0,C,ok,57.0,D,Below Average,Moderate
+S1225,Yash Saini,22.0,Male,Management,100.0,75.0,B,ok,75.0,B,Good,High
+S1760,Tarun Malik,,Male,Science,91.0,76.0,,ok,76.0,B,Good,High
+S1093,Tanvi Singh,22.0,Female,Arts,89.0,72.0,B,ok,72.0,C,Average,Regular
+S1152,Vivaan Agarwal,22.0,Male,Commerce,75.0,66.0,C,ok,66.0,C,Average,Regular
+S1318,Tanvi Chauhan,18.0,Female,Science,83.0,,,missing_marks,,,,Regular
+S1449,Aarav Tyagi,18.0,Male,Management,81.0,74.0,B,ok,74.0,C,Average,Regular
+S1804,Gaurav Kumar,19.0,Male,Computer,74.0,68.0,C,ok,68.0,C,Average,Moderate
+S1746,Arjun Singh,19.0,Male,Computer,99.0,77.0,,ok,77.0,B,Good,High
+S1523,Sakshi Yadav,,Female,Commerce,79.0,69.0,C,ok,69.0,C,Average,Regular
+S1280,Karan Sharma,20.0,Male,Commerce,79.0,57.0,D,ok,57.0,D,Below Average,Regular
+s1584,Ritika Jain,20.0,Female,Arts,55.0,23.0,F,ok,23.0,F,Poor,Low
+S1765,Anjali Mishra,19.0,Female,Arts,93.0,,C,missing_marks,,,,High
+S1605,Vikas Gupta,20.0,Male,Computer,69.0,63.0,C,ok,63.0,C,Average,Moderate
+S1350,Aina Mishra,18.0,Female,Commerce,75.0,68.0,C,ok,68.0,C,Average,Regular
+S1928,Sneha Mishra,19.0,Female,Computer,100.0,78.0,B,ok,78.0,B,Good,High
+S1375,Pranav Kumar,19.0,Male,Commerce,98.0,,C,missing_marks,,,,High
+S1401,Manish Gupta,19.0,Male,Science,75.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1705,Harsh Saini,21.0,Male,Art,78.0,55.0,C,ok,55.0,D,Below Average,Regular
+S1258,Muskan Sharma,21.0,Female,Arts,88.0,46.0,D,ok,46.0,D,Below Average,Regular
+s1945,Kavya Sharma,18.0,Female,Science,97.0,83.0,B,ok,83.0,B,Good,High
+S1495,Ritika Tyagi,19.0,Female,Comm.,94.0,72.0,B,ok,72.0,C,Average,High
+S1773,Karan Kumar,20.0,Male,Science,75.0,63.0,C,ok,63.0,C,Average,Regular
+S1551,Pooja Yadav,20.0,Female,Arts,38.0,,d,missing_marks,,,,Low
+S1202,Riya Pandey,,Female,Science,75.0,62.0,C,ok,62.0,C,Average,Regular
+S1313,Vikas Mishra,22.0,Male,Science,88.0,76.0,,ok,76.0,B,Good,Regular
+S1291,Sakshi Khan,19.0,Female,Commerce,71.0,60.0,C,ok,60.0,C,Average,Moderate
+S1764,Sahil Singh,20.0,Male,Arts,78.0,28.0,f,ok,28.0,F,Poor,Regular
+S1950,Deepak Gupta,,Male,Management,85.0,57.0,,ok,57.0,D,Below Average,Regular
+S1184,Ankit Rajput,,Male,Arts,72.0,33.0,F,ok,33.0,F,Poor,Moderate
+S1251,Deepak Khan,22.0,Male,Science,78.0,47.0,D,ok,47.0,D,Below Average,Regular
+S1824,Komal Gupta,19.0,Female,Science,69.0,68.0,C,ok,68.0,C,Average,Moderate
+S1941,Simran Sharma,20.0,Female,Management,82.0,65.0,C,ok,65.0,C,Average,Regular
+S1392,Pooja Chauhan,18.0,Female,Computer,68.0,65.0,C,ok,65.0,C,Average,Moderate
+S1905,Pranav Ahmad,20.0,Male,Computer,100.0,54.0,D,ok,54.0,D,Below Average,High
+S1731,Kunal Khan,19.0,Male,Science,71.0,32.0,F,ok,32.0,F,Poor,Moderate
+S1555,Pooja Yadav,20.0,Female,Computer,90.0,,C,missing_marks,,,,High
+S1367,Komal Tyagi,22.0,Female,Arts,80.0,60.0,C,ok,60.0,C,Average,Regular
+S1346,Yash Yadav,20.0,Male,Management,82.0,64.0,C,ok,64.0,C,Average,Regular
+S1536,Pranav Bansal,22.0,Male,Computer,64.0,80.0,B,ok,80.0,B,Good,Moderate
+S1920,Komal Gupta,18.0,Female,Science,72.0,35.0,F,ok,35.0,F,Poor,Moderate
+S1212,Nitin Malik,20.0,Male,Computer,82.0,58.0,C,ok,58.0,D,Below Average,Regular
+S1503,Vikas Mishra,20.0,Male,Science,78.0,52.0,D,ok,52.0,D,Below Average,Regular
+S1538,Muskan Malik,21.0,Female,Computer,75.0,85.0,A,ok,85.0,B,Good,Regular
+S1176,Vivaan Singh,20.0,Male,Management,83.0,69.0,C,ok,69.0,C,Average,Regular

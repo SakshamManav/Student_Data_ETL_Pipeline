@@ -1,0 +1,309 @@
+Student ID,Name,Age,Gender,Department,Attendance,Marks,Grade
+S389, meera verma ,24,male,MANAGEMENT,54.0,24.0,F
+S110,Karan Singh,24,Female,comp sci,67.0,,
+S158,Sai Joshi,20,Female,Arts,64.0,53.0,D
+S161,  Sneha Reddy  ,17,M,Commerce,87.0,78.0,B
+S126,Vivaan Nair,25,Male,SCIENCE,62.0,,
+S164,  Aadhya Joshi  ,25,female,BBA,49.0,110.0,Invalid
+S193, aarav das ,20,Female,CS,77.0,67.0,C
+S285,  Sneha Singh  ,18,Other, Mgmt ,90.0,24.0,F
+S345,  Vihaan Mehta  ,18,Female, Science ,87.0,29.0,F
+S147,  Aditya Nair  ,22,male, commerce,74.0,64.0,C
+S176,  Krishna Singh  ,17,Other,CS,45.0,56.0,D
+S264,vihaan kumar,19,Male,Sci,90.0,40.0,D
+S395,Priya Reddy,18,M,BSc,82.0,60.0,C
+S372,reyansh joshi,23,M,Humanities,85.0,30.0,C
+S385,POOJA KUMAR,17,female,ARTS,40.0,20.0,F
+S390,arjun nair,23,F,BBA,88.0,105.0,Invalid
+S106,Karan Reddy,17,F,Management,82.0,36.0,F
+S256,AMIT VERMA,18,Female,Commerce,,88.0,B
+S265,Vihaan Nair,24,male,Arts,68.0,38.0,F
+S269,Reyansh Singh,20,Other, arts ,47.0,50.0,D
+S174,myra nair,19,F,Humanities,,83.0,B
+S205,  Priya Mehta  ,25,F, Mgmt ,73.0,31.0,F
+S238,Diya Reddy,19,male,Humanities,99.0,60.0,C
+S307,Sneha Joshi,24,F,Humanities,90.0,57.0,D
+S177,Riya Roy,25,female, Mgmt ,47.0,56.0,D
+S274,AARAV GUPTA,25,male, commerce,85.0,88.0,B
+S214,  Rahul Khan  ,21,Female,MANAGEMENT,62.0,45.0,D
+S134,Sara Chopra,20,Male,Sci,89.0,88.0,B
+S375,POOJA ROY,19,Other,Sci,87.0,87.0,B
+S352,ARJUN PATEL,24,F,Arts,62.0,63.0,C
+S209,arjun iyer,22,Male,CS,84.0,78.0,B
+S104,MEERA IYER,17,male,Computer,87.0,73.0,C
+S183,  Neha Khan  ,20,M,Management,58.0,70.0,C
+S360,Krishna Singh,18,Other,BSc,120.0,72.0,C
+S194,neha nair,19,Other,Commerce,41.0,32.0,F
+S202,aarav reddy,21,F,BSc,71.0,88.0,B
+S146,pooja singh,17,male,comp sci,86.0,66.0,C
+S118,Krishna Iyer,23,Female,SCIENCE,61.0,25.0,F
+S298,meera roy,17,Female,comp sci,43.0,52.0,D
+S220,arjun patel,18,Other, commerce,50.0,63.0,C
+S143, vihaan nair ,18,Male,BCom,54.0,29.0,F
+S125,  Pooja Joshi  ,25,Male,Management,65.0,46.0,D
+S280,  Pooja Das  ,25,female,Sci,96.0,68.0,C
+S343,Rahul Khan,21,female, Science ,54.0,68.0,C
+S397,MEERA IYER,22,female,BSc,45.0,88.0,B
+S297,Reyansh Kumar,17,M, commerce,45.0,87.0,B
+S327,Aadhya Singh,18,female,comp sci,98.0,69.0,C
+S108,diya iyer,23,Other,BCom,86.0,78.0,B
+S387,  Priya Sharma  ,22,F, Mgmt ,99.0,-10.0,Invalid
+S178,Riya Iyer,23,Other,BCom,52.0,78.0,B
+S215,Ananya Verma,24,F,BBA,68.0,110.0,Invalid
+S340,meera joshi,21,M,CS,68.0,75.0,B
+S246,Sai Das,24,Male,comp sci,89.0,22.0,F
+S185,Diya Khan,22,Other,comp sci,78.0,26.0,F
+S282,SARA SINGH,22,M,Humanities,49.0,56.0,D
+S331,Vikram Joshi,18,male,Science,,97.0,A
+S101,Aarav Sharma,20,Male,Computer,92.0,85.0,B
+S299,Aditya Khan,25,Male, commerce,82.0,28.0,F
+S296,  Vivaan Nair  ,25,female, arts ,,92.0,A
+S311,RIYA REDDY,21,Female,Management,50.0,53.0,D
+S325,  Aadhya Chopra  ,18,M,ARTS,76.0,76.0,B
+S259,Meera Joshi,25,Female, arts ,50.0,68.0,C
+S227,SARA BOSE,23,Female, commerce,60.0,73.0,C
+S210, vihaan sharma ,25,Female,BCom,86.0,45.0,D
+S348,diya singh,25,F, commerce,87.0,36.0,F
+S335,Aditya Singh,25,Female,BBA,45.0,40.0,D
+S303,  Rahul Patel  ,24,M,BBA,78.0,72.0,C
+S179,AMIT NAIR,19,Male,BBA,89.0,66.0,C
+S248,sai gupta,24,Other,MANAGEMENT,47.0,55.0,D
+S160,RIYA MEHTA,20,Other,COMMERCE,41.0,28.0,F
+S219,  Amit Reddy  ,19,female, commerce,100.0,95.0,A
+S107,Neha Iyer,17,Male,BCom,72.0,99.0,A
+S283,sneha bose,18,Other,SCIENCE,72.0,,
+S131,ADITYA VERMA,20,Male,Commerce,49.0,87.0,B
+S123,Aarav Iyer,18,Other,BCom,85.0,75.0,B
+S363,Arjun Joshi,18,Female,Management,56.0,88.0,B
+S157,Krishna Gupta,24,Other,ARTS,100.0,73.0,C
+S249,NEHA KUMAR,18,F,BCom,74.0,95.0,A
+S241, riya singh ,19,Female,Science,,30.0,F
+S309,RAHUL PATEL,22,Female, Computer ,,41.0,D
+S378, krishna reddy ,18,Male,BBA,,70.0,C
+S304, sai patel ,22,Male, commerce,87.0,79.0,B
+S245,  Krishna Patel  ,22,Male, commerce,65.0,36.0,F
+S268, vihaan mehta ,23,F, commerce,76.0,43.0,D
+S191, sneha singh ,18,male,BCom,58.0,94.0,A
+S324,MEERA CHOPRA,18,male, arts ,84.0,22.0,F
+S167,Rahul Das,19,M, Computer ,81.0,71.0,C
+S217,Sara Chopra,25,Female,Commerce,78.0,43.0,D
+S273,Sai Singh,19,Male, Mgmt ,120.0,39.0,F
+S351,Aadhya Gupta,23,male,comp sci,78.0,41.0,D
+S120,Amit Gupta,23,Female,COMPUTER,87.0,81.0,B
+S247,  Aadhya Mehta  ,23,male, Computer ,45.0,79.0,B
+S180,Diya Joshi,21,Male, commerce,105.0,57.0,D
+S398,AADHYA KUMAR,21,M,Humanities,49.0,85.0,B
+S388, meera sharma ,25,M, Mgmt ,54.0,43.0,D
+S173,Riya Roy,25,female,Management,56.0,83.0,B
+S116,  Vivaan Joshi  ,24,Male,COMPUTER,90.0,42.0,D
+S111,Aadhya Reddy,20,Male,BSc,51.0,95.0,A
+S374,RIYA SINGH,17,male,SCIENCE,105.0,75.0,B
+S339,  Isha Sharma  ,22,Male, arts ,40.0,66.0,C
+S198,  Pooja Bose  ,23,Other, Mgmt ,69.0,55.0,D
+S169,MYRA SHARMA,17,male, commerce,60.0,29.0,F
+S341,Vikram Bose,21,Other,BCom,-5.0,81.0,B
+S138,  Sai Roy  ,24,male,COMPUTER,40.0,84.0,B
+S117,  Reyansh Bose  ,22,F, Mgmt ,50.0,81.0,B
+S156,Reyansh Nair,18,M, Computer ,73.0,60.0,C
+S255,Krishna Reddy,17,F, commerce,76.0,64.0,C
+S379,Ananya Sharma,17,Female,Humanities,120.0,92.0,A
+S168,  Arjun Reddy  ,22,Female,BSc,62.0,97.0,A
+S212,aditya verma,25,Other,Humanities,54.0,39.0,F
+S170,  Riya Chopra  ,20,male, Mgmt ,98.0,49.0,D
+S132,Krishna Iyer,22,male,CS,82.0,27.0,F
+S284,Meera Mehta,23,female,Arts,,35.0,F
+S258,Rahul Iyer,23,M, commerce,65.0,20.0,F
+S338,  Rahul Sharma  ,18,Female,Science,,30.0,F
+S225,Isha Gupta,25,Female,Humanities,47.0,62.0,C
+S119, krishna kumar ,25,Male, arts ,67.0,92.0,A
+S359,Ananya Gupta,24,F, Mgmt ,77.0,58.0,D
+S197,Aadhya Chopra,17,Female,comp sci,56.0,59.0,D
+S240,  Sneha Kumar  ,25,Male,Humanities,-5.0,34.0,F
+S233,  Vihaan Kumar  ,24,F,comp sci,94.0,32.0,F
+S187,ISHA KHAN,17,Female,Commerce,50.0,60.0,C
+S361,  Karan Mehta  ,25,female, Computer ,105.0,78.0,B
+S253,AARAV KHAN,25,female, Science ,71.0,43.0,D
+S226,  Priya Mehta  ,21,M,Arts,59.0,21.0,F
+S362, myra bose ,24,Other, Computer ,98.0,54.0,D
+S305,AADHYA KUMAR,18,male, commerce,90.0,63.0,C
+S225,Isha Gupta,25,Female,Humanities,47.0,62.0,C
+S394,Karan Mehta,21,Other, Mgmt ,52.0,29.0,F
+S276,Riya Nair,24,Male,Management,44.0,58.0,D
+S294,  Riya Roy  ,25,Female, Computer ,65.0,42.0,D
+S319, amit roy ,19,Male,Management,68.0,63.0,C
+S393,RAHUL KHAN,24,male,Sci,67.0,23.0,F
+S230,Amit Chopra,20,male,BBA,56.0,20.0,F
+S139,Myra Sharma,24,M,COMPUTER,87.0,73.0,C
+S347,aditya roy,22,female, Mgmt ,84.0,53.0,D
+S278,priya chopra,18,Male,Arts,90.0,45.0,D
+S244,Diya Bose,25,Male,BBA,82.0,82.0,B
+S213, krishna singh ,17,Female,Science,48.0,64.0,C
+S277,riya sharma,22,Female, Mgmt ,61.0,31.0,F
+S218,Vikram Das,22,Female, commerce,71.0,,
+S386, neha joshi ,18,female, arts ,43.0,86.0,B
+S380,  Aadhya Verma  ,24,female,Sci,41.0,39.0,F
+S346,Sai Bose,23,M, arts ,45.0,59.0,D
+S286,  Ananya Das  ,20,female,Arts,76.0,61.0,C
+S334,ANANYA NAIR,25,Male,Arts,88.0,95.0,A
+S103,Rahul Verma,21,Male,Science,88.0,105.0,Invalid
+S216,sneha patel,25,male, commerce,59.0,36.0,F
+S295,aadhya roy,17,F,Commerce,40.0,50.0,D
+S287,  Krishna Singh  ,23,female,BCom,88.0,51.0,D
+S221,  Riya Singh  ,17,M, Mgmt ,58.0,55.0,D
+S323,  Vivaan Roy  ,22,F,BCom,44.0,43.0,D
+S368,Sai Joshi,23,female,COMMERCE,,54.0,D
+S228,RIYA PATEL,20,M,Management,62.0,-10.0,Invalid
+S175,Krishna Gupta,21,F,comp sci,84.0,42.0,D
+S130,aditya joshi,22,female,COMMERCE,80.0,96.0,A
+S184,  Karan Nair  ,18,M,Humanities,75.0,27.0,F
+S357,Vihaan Kumar,23,Female,ARTS,50.0,64.0,C
+S208,VIHAAN REDDY,18,M, Mgmt ,57.0,39.0,F
+S391,  Sara Kumar  ,25,male, arts ,47.0,82.0,B
+S266,Sara Kumar,20,F,BSc,72.0,-10.0,Invalid
+S234,PRIYA BOSE,23,female,Sci,105.0,49.0,D
+S383,aadhya kumar,18,female,BSc,40.0,93.0,A
+S329,Riya Mehta,23,Female,COMPUTER,,26.0,F
+S166,Sara Patel,18,M, commerce,63.0,39.0,F
+S310,Aditya Patel,17,female, Science ,48.0,55.0,D
+S186,myra sharma,23,Female,Commerce,120.0,83.0,B
+S326,Sai Reddy,21,male,BBA,92.0,94.0,A
+S260,Sneha Khan,18,Other,COMMERCE,96.0,79.0,B
+S113,AADHYA MEHTA,24,M,SCIENCE,73.0,55.0,D
+S136,arjun roy,19,Female,BCom,81.0,71.0,C
+S129,  Myra Mehta  ,21,female, commerce,60.0,38.0,F
+S271, karan reddy ,22,Other,Commerce,98.0,90.0,A
+S243,Vikram Khan,18,Other,BSc,58.0,61.0,C
+S355,  Meera Gupta  ,25,Female,Computer,73.0,55.0,D
+S232, ananya sharma ,17,Male,COMMERCE,47.0,25.0,F
+S281,  Meera Reddy  ,18,male,CS,49.0,43.0,D
+S152,VIVAAN SHARMA,25,male, arts ,92.0,22.0,F
+S196,amit joshi,21,Female,CS,87.0,25.0,F
+S320,diya bose,25,male,COMMERCE,91.0,59.0,D
+S279,Arjun Iyer,19,female,Commerce,96.0,31.0,F
+S333, reyansh kumar ,22,F, Computer ,67.0,83.0,B
+S142,Vivaan Patel,21,Male,ARTS,74.0,23.0,F
+S190,Krishna Reddy,18,female,Computer,75.0,84.0,B
+S330,Krishna Khan,21,M, Mgmt ,97.0,78.0,B
+S237,RIYA BOSE,19,female,ARTS,100.0,82.0,B
+S127,karan kumar,21,Female,Arts,88.0,35.0,F
+S103, rahul verma ,20,Male,Computer,70.0,65.0,C
+S242,amit kumar,17,Other,BCom,81.0,98.0,A
+S312,Vihaan Joshi,22,Male,comp sci,54.0,47.0,D
+S101,Aarav Sharma,20,Male,Computer,92.0,85.0,B
+S392,Meera Verma,24,female,BBA,82.0,86.0,B
+S381,  Ananya Patel  ,19,Female,BSc,67.0,31.0,F
+S201,ISHA JOSHI,19,female, commerce,98.0,46.0,D
+S293,vivaan kumar,19,female,Management,,66.0,C
+S366,Rahul Das,17,M, commerce,81.0,64.0,C
+S204,  Ananya Nair  ,20,male,Computer,90.0,20.0,F
+S272,POOJA SHARMA,19,male,SCIENCE,67.0,63.0,C
+S199,KRISHNA PATEL,25,Female, Science ,49.0,66.0,C
+S137,karan singh,18,female,comp sci,90.0,36.0,F
+S162,Amit Khan,23,Other, Science ,68.0,78.0,B
+S251,Ananya Roy,19,Female,BSc,48.0,59.0,D
+S350,Sara Iyer,23,Other,BSc,94.0,86.0,B
+S314,  Aadhya Das  ,23,Other, commerce,59.0,55.0,D
+S356,ISHA CHOPRA,23,female, Computer ,63.0,30.0,F
+S112,  Krishna Singh  ,24,Female,Science,79.0,52.0,D
+S126,vivaan nair,25,Male,SCIENCE,93.0,42.0,
+S301,Myra Sharma,25,male,Science,54.0,99.0,A
+S376,meera joshi,17,male,BSc,46.0,73.0,C
+S128,Rahul Roy,21,female, commerce,47.0,75.0,B
+S332,  Vikram Bose  ,18,Male,ARTS,88.0,52.0,D
+S105,neha roy,20,Male,Management,66.0,89.0,B
+S223,pooja iyer,25,male, arts ,45.0,80.0,B
+S133,Krishna Bose,19,male,BBA,86.0,-10.0,Invalid
+S321,Rahul Verma,22,Other,Science,52.0,85.0,B
+S263,Pooja Nair,17,F, Mgmt ,80.0,28.0,F
+S322,arjun gupta,21,F,BBA,72.0,82.0,B
+S367,Arjun Das,17,Male, Mgmt ,45.0,56.0,D
+S239,Vivaan Joshi,21,F,BCom,66.0,31.0,F
+S163, isha gupta ,18,M,Computer,,60.0,C
+S316,ISHA KUMAR,19,female, arts ,58.0,84.0,B
+S236,Aarav Das,17,Other, Mgmt ,51.0,42.0,D
+S229,  Sneha Chopra  ,17,male,Management,84.0,80.0,B
+S399,Riya Iyer,23,male, Computer ,43.0,35.0,F
+S109,Vihaan Mehta,24,female,comp sci,71.0,30.0,F
+S171,ananya joshi,25,Other,Commerce,70.0,76.0,B
+S373,Myra Kumar,17,female, Science ,63.0,100.0,A
+S165,vikram roy,23,Other,Science,70.0,56.0,D
+S145,  Sneha Das  ,21,Other,ARTS,92.0,65.0,C
+S349,  Sai Chopra  ,23,Male,Humanities,84.0,47.0,D
+S257,ADITYA DAS,17,Female,SCIENCE,84.0,31.0,F
+S141,Meera Verma,24,Male,CS,,57.0,D
+S224, sneha iyer ,24,Other,Management,94.0,38.0,F
+S384,Vivaan Kumar,19,Other,Computer,80.0,93.0,A
+S317,amit khan,25,F, Science ,80.0,94.0,A
+S254,Meera Bose,25,M,CS,96.0,60.0,C
+S124,amit reddy,25,Other, Computer ,85.0,49.0,D
+S369,Vivaan Iyer,19,Other,Computer,99.0,57.0,D
+S211,Vivaan Iyer,17,Female,SCIENCE,77.0,105.0,Invalid
+S182,Vivaan Reddy,21,Female,Humanities,83.0,73.0,C
+S337,krishna roy,17,F, Mgmt ,71.0,,
+S308,Priya Chopra,24,Other,Arts,63.0,75.0,B
+S313,Krishna Chopra,20,female,Commerce,70.0,49.0,D
+S140,sara bose,21,M, arts ,83.0,42.0,D
+S354,  Arjun Mehta  ,25,F,CS,49.0,26.0,F
+S400,karan iyer,17,female, Mgmt ,56.0,28.0,F
+S370,Priya Das,19,M,Management,66.0,20.0,F
+S300, diya roy ,24,F,Arts,91.0,84.0,B
+S115,Amit Nair,21,Other, arts ,94.0,25.0,F
+S148,Pooja Sharma,17,female, Mgmt ,74.0,84.0,B
+S195,NEHA VERMA,25,Female,Management,65.0,59.0,D
+S372,Reyansh Joshi,23,M,Humanities,87.0,64.0,C
+S328,  Sai Iyer  ,22,female,Science,120.0,70.0,C
+S382,sneha singh,24,Male,BSc,87.0,85.0,B
+S302,vikram mehta,19,Other,BBA,88.0,-10.0,Invalid
+S262,myra mehta,22,male,BSc,87.0,88.0,B
+S144,Isha Reddy,20,M, arts ,80.0,73.0,C
+S318,Myra Joshi,24,F,BSc,69.0,82.0,B
+S291,arjun sharma,17,female,Arts,70.0,34.0,F
+S206,ISHA DAS,19,Male,Sci,73.0,45.0,D
+S154, vikram kumar ,24,Other,Computer,57.0,94.0,A
+S102,Diya Patel,19,Female,Commerce,,78.0,B
+S150,Pooja Reddy,20,male, Science ,66.0,99.0,A
+S181,vikram reddy,24,Female,ARTS,41.0,81.0,B
+S306,amit patel,19,Other,COMMERCE,71.0,98.0,A
+S135,Myra Joshi,20,Male,Computer,94.0,43.0,D
+S364,Arjun Gupta,24,male, Mgmt ,78.0,29.0,F
+S192,Sai Singh,25,male, Science ,75.0,56.0,D
+S153, meera chopra ,19,Female,SCIENCE,90.0,24.0,F
+S365,RAHUL KUMAR,18,male,Computer,69.0,67.0,C
+S342,ananya reddy,25,male,Arts,88.0,61.0,C
+S114, amit gupta ,21,male,CS,53.0,27.0,F
+S189,Aadhya Nair,18,Other,Management,81.0,28.0,F
+S267,Isha Verma,22,male,BBA,96.0,90.0,A
+S223,pooja iyer,25,male, arts ,45.0,80.0,B
+S235,Aditya Iyer,22,Other,MANAGEMENT,83.0,90.0,A
+S396,Ananya Reddy,21,Female, commerce,85.0,64.0,C
+S344,Ananya Mehta,18,Male,COMPUTER,96.0,88.0,B
+S155,sara kumar,19,M,MANAGEMENT,66.0,73.0,C
+S151,Priya Iyer,18,Other,BSc,,53.0,D
+S275,  Meera Patel  ,24,Other,Management,98.0,28.0,F
+S290,aadhya sharma,24,male, Science ,91.0,63.0,C
+S216,sneha patel,25,male, commerce,76.0,50.0,F
+S288,Krishna Roy,24,Other,BSc,59.0,99.0,A
+S270,VIVAAN JOSHI,25,male,Commerce,65.0,29.0,F
+S159,  Sai Singh  ,24,Male, commerce,59.0,33.0,F
+S149,Isha Singh,19,F,COMPUTER,76.0,22.0,F
+S336,Neha Nair,23,M,CS,75.0,24.0,F
+S353,Pooja Kumar,19,M,Arts,59.0,32.0,F
+S122,Sneha Iyer,21,M,Computer,42.0,-10.0,Invalid
+S261, aarav iyer ,24,Female,comp sci,66.0,57.0,D
+S377,  Priya Das  ,25,Male,BBA,41.0,73.0,C
+S292,  Diya Gupta  ,25,F,Humanities,54.0,38.0,F
+S358,Sneha Joshi,25,F,Arts,97.0,,
+S250,Riya Das,17,male,Science,64.0,,
+S231,riya bose,25,F, commerce,97.0,39.0,F
+S252,PRIYA SINGH,21,female,BCom,80.0,45.0,D
+S200,  Diya Sharma  ,21,M,Humanities,68.0,85.0,B
+S188,Sara Iyer,18,Female, arts ,,73.0,C
+S315,amit joshi,20,Male,Management,51.0,75.0,B
+S222,  Karan Bose  ,25,female,BSc,,32.0,F
+S220,arjun patel,18,Other, commerce,80.0,90.0,C
+S121, pooja chopra ,18,female,Humanities,62.0,57.0,D
+S289,pooja iyer,21,M,Management,84.0,90.0,A
+S172,reyansh kumar,21,male,SCIENCE,56.0,81.0,B
+S207,meera gupta,17,F,Science,80.0,74.0,C
+S371,Riya Patel,19,male, arts ,71.0,94.0,A
+S203,Vikram Bose,20,Female,MANAGEMENT,57.0,21.0,F
