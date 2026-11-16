@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import pandas as pd
 
+from src.profile import profile_data
 from src.transform import transform_data
 
 
@@ -25,6 +26,7 @@ def test_exact_and_conflicting_duplicates():
     reasons = set(rejected["rejection_reason"].astype(str))
     assert "exact_duplicate_row" in reasons
     assert "conflicting_duplicate_student_id" in reasons
+    assert set(rejected["action"]) == {"row_removed"}
 
 
 def test_marks_range_validation_flags_invalid():
@@ -38,6 +40,7 @@ def test_marks_range_validation_flags_invalid():
     assert clean["Marks"].isna().all()
     assert "invalid_marks" in "|".join(clean["data_quality_flag"].tolist())
     assert (rejected["rejection_reason"] == "invalid_marks").sum() >= 2
+    assert set(rejected["action"]) == {"value_invalidated"}
 
 
 def test_attendance_range_validation_flags_invalid():
@@ -47,9 +50,11 @@ def test_attendance_range_validation_flags_invalid():
         ]
     )
     clean, rejected = transform_data(df)
-    assert clean.loc[0, "Attendance"] != 120
+    assert pd.isna(clean.loc[0, "Attendance"])
     assert "invalid_attendance" in clean.loc[0, "data_quality_flag"]
+    assert "attendance_imputed" not in clean.loc[0, "data_quality_flag"]
     assert "invalid_attendance" in rejected["rejection_reason"].values
+    assert set(rejected["action"]) == {"value_invalidated"}
 
 
 def test_department_and_gender_normalization():
@@ -109,3 +114,41 @@ def test_missing_marks_left_as_nan_and_flagged():
     assert pd.isna(clean.loc[0, "Marks"])
     assert "missing_marks" in clean.loc[0, "data_quality_flag"]
     assert pd.isna(clean.loc[0, "Grade_Computed"])
+
+
+def test_percentage_attendance_stays_numeric_and_grade_uppercased():
+    df = _base_df(
+        [
+            {"Student ID": "S70", "Name": "A", "Age": 20, "Gender": "M", "Department": "Computer", "Attendance": "92%", "Marks": 85, "Grade": "b"},
+        ]
+    )
+    clean, _ = transform_data(df)
+    assert clean.loc[0, "Attendance"] == 92.0
+    assert clean.loc[0, "data_quality_flag"] == "ok"
+    assert clean.loc[0, "Grade"] == "B"
+
+
+def test_age_text_extracts_leading_integer():
+    df = _base_df(
+        [
+            {"Student ID": "S71", "Name": "A", "Age": "19 yrs", "Gender": "M", "Department": "Science", "Attendance": "88%", "Marks": 78, "Grade": "b"},
+        ]
+    )
+    clean, _ = transform_data(df)
+    assert clean.loc[0, "Age"] == 19
+    assert clean.loc[0, "Attendance"] == 88.0
+    assert clean.loc[0, "data_quality_flag"] == "ok"
+
+
+def test_blank_student_ids_are_not_counted_as_duplicate_ids():
+    df = _base_df(
+        [
+            {"Student ID": "", "Name": "A", "Age": 20, "Gender": "M", "Department": "Computer", "Attendance": 80, "Marks": 70, "Grade": "C"},
+            {"Student ID": None, "Name": "B", "Age": 21, "Gender": "F", "Department": "Science", "Attendance": 90, "Marks": 80, "Grade": "B"},
+        ]
+    )
+    profile = profile_data(df)
+    assert profile["missing_student_ids"] == 2
+    assert profile["duplicate_student_ids"] == 0
+    clean, _ = transform_data(df)
+    assert len(clean) == 2

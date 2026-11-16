@@ -6,6 +6,7 @@ Run with:
 
 from __future__ import annotations
 
+import io
 import tempfile
 from pathlib import Path
 
@@ -15,12 +16,18 @@ import streamlit as st
 from main import run_pipeline, setup_logging
 from src.config import (
     ANALYSIS_REPORT_FILE,
+    BASE_DIR,
+    CLEAN_AUDIT_DATA_FILE,
     CLEAN_DATA_FILE,
     LOG_FILE,
     OUTPUTS_CHARTS_DIR,
     QUALITY_REPORT_FILE,
     RAW_DATA_FILE,
     REJECTED_DATA_FILE,
+    REQUIRED_COLUMNS,
+    SQLITE_AUDIT_TABLE,
+    SQLITE_DB_FILE,
+    SQLITE_TABLE,
 )
 from src.extract import extract_data
 from src.profile import profile_data
@@ -126,6 +133,22 @@ def _prepare_input(uploaded_file, use_sample: bool) -> Path | None:
     return None
 
 
+def _to_excel_bytes(df: pd.DataFrame) -> bytes:
+    """Convert a DataFrame to Excel bytes for download."""
+    buffer = io.BytesIO()
+    with pd.ExcelWriter(buffer, engine="openpyxl") as writer:
+        df.to_excel(writer, index=False, sheet_name="Data")
+    return buffer.getvalue()
+
+
+def _relative_path(path: Path) -> str:
+    """Return a project-relative path when possible."""
+    try:
+        return path.resolve().relative_to(BASE_DIR.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
 # Sidebar - Input panel
 st.sidebar.markdown('<div class="section-label accent-blue">Input Panel</div>', unsafe_allow_html=True)
 st.sidebar.caption("Upload your student data file to begin.")
@@ -152,6 +175,8 @@ if input_path is None:
     st.session_state["pipeline_result"] = None
     st.session_state["input_label"] = None
     st.session_state["input_sig"] = None
+    st.session_state["view_section"] = "cleaned"
+    st.session_state.pop("view_selector", None)
     st.markdown('<div class="section-card">', unsafe_allow_html=True)
     st.info("Upload a CSV/Excel file or select sample data from the sidebar to start.")
     st.markdown("</div>", unsafe_allow_html=True)
@@ -169,6 +194,7 @@ if st.session_state["input_sig"] != input_sig:
     st.session_state["pipeline_result"] = None
     st.session_state["input_label"] = None
     st.session_state["view_section"] = "cleaned"
+    st.session_state.pop("view_selector", None)
     st.session_state["input_sig"] = input_sig
 
 st.sidebar.markdown(f'<span class="muted">Selected:</span> <span class="accent-green">{input_label}</span>', unsafe_allow_html=True)
@@ -184,17 +210,21 @@ except Exception as exc:
 # Step 2: Before pipeline
 st.markdown('<div class="step-header accent-blue">Step 2: Raw Data Overview</div>', unsafe_allow_html=True)
 st.caption("Profile of the uploaded data before cleaning.")
+missing_before = int(
+    sum(int(raw_profile["null_counts"].get(col, 0)) for col in REQUIRED_COLUMNS)
+)
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Total rows", raw_profile["row_count"])
-c2.metric("Missing values", raw_profile["total_nulls"])
+c2.metric("Missing values (original columns)", missing_before)
 c3.metric("Duplicate IDs", raw_profile["duplicate_student_ids"])
 c4.metric("Exact duplicates", raw_profile["exact_duplicate_rows"])
 
 out_range = raw_profile.get("out_of_range_counts", {})
-o1, o2, o3 = st.columns(3)
-o1.metric("Out-of-range Marks", out_range.get("Marks", 0))
-o2.metric("Out-of-range Attendance", out_range.get("Attendance", 0))
-o3.metric("Non-numeric Age", out_range.get("Age_non_numeric", 0))
+o1, o2, o3, o4 = st.columns(4)
+o1.metric("Missing Student IDs", raw_profile.get("missing_student_ids", 0))
+o2.metric("Out-of-range Marks", out_range.get("Marks", 0))
+o3.metric("Out-of-range Attendance", out_range.get("Attendance", 0))
+o4.metric("Non-numeric Age", out_range.get("Age_non_numeric", 0))
 
 null_df = pd.DataFrame(
     {"Column": list(raw_profile["null_counts"].keys()), "Missing": list(raw_profile["null_counts"].values())}
@@ -252,11 +282,48 @@ st.divider()
 # Step 4: Results
 st.markdown('<div class="step-header accent-green">Step 4: Cleaning Results</div>', unsafe_allow_html=True)
 st.caption("Comparison of data before and after the pipeline.")
-a1, a2, a3, a4 = st.columns(4)
-a1.metric("Rows before", raw_profile_res["row_count"])
-a2.metric("Cleaned rows", len(clean_df), delta=len(clean_df) - raw_profile_res["row_count"])
-a3.metric("Rejected rows", len(rejected_df))
-a4.metric("Missing values now", int(clean_df.isna().sum().sum()), delta=int(clean_df.isna().sum().sum()) - raw_profile_res["total_nulls"])
+
+row_removed = (
+    int((rejected_df["action"] == "row_removed").sum())
+    if "action" in rejected_df.columns
+    else 0
+)
+values_invalidated = (
+    int((rejected_df["action"] == "value_invalidated").sum())
+    if "action" in rejected_df.columns
+    else 0
+)
+original_cols = [col for col in REQUIRED_COLUMNS if col in clean_df.columns]
+missing_before = int(
+    sum(int(raw_profile_res["null_counts"].get(col, 0)) for col in REQUIRED_COLUMNS)
+)
+missing_after = int(clean_df[original_cols].isna().sum().sum())
+derived_not_computed = (
+    int(clean_df["Grade_Computed"].isna().sum()) if "Grade_Computed" in clean_df else 0
+)
+rows_before = int(raw_profile_res["row_count"])
+
+a1, a2, a3, a4, a5 = st.columns(5)
+a1.metric("Rows before", rows_before)
+a2.metric("Rows removed (duplicates)", row_removed)
+a3.metric("Values invalidated and flagged", values_invalidated)
+a4.metric("Cleaned rows", len(clean_df))
+a5.metric(
+    "Missing values (original columns)",
+    f"{missing_before} -> {missing_after}",
+    delta=missing_after - missing_before,
+    delta_color="inverse",
+)
+st.caption(
+    f"Derived fields not computed (marks missing): {derived_not_computed} rows"
+)
+st.markdown(
+    f'<span class="muted">Reconciliation:</span> '
+    f'<span class="accent-blue">{rows_before}</span> rows before − '
+    f'<span class="accent-red">{row_removed}</span> rows removed = '
+    f'<span class="accent-green">{len(clean_df)}</span> cleaned rows',
+    unsafe_allow_html=True,
+)
 
 missing_marks = int(clean_df["Marks"].isna().sum()) if "Marks" in clean_df else 0
 attendance_imputed = (
@@ -264,25 +331,33 @@ attendance_imputed = (
     if "data_quality_flag" in clean_df
     else 0
 )
-flagged_rows = int((clean_df["data_quality_flag"] != "ok").sum()) if "data_quality_flag" in clean_df else 0
 
 st.markdown('<div class="section-label accent-green">Cleaning actions summary</div>', unsafe_allow_html=True)
 s1, s2, s3, s4 = st.columns(4)
-s1.metric("Duplicates/invalid rejected", len(rejected_df))
-s2.metric("Attendance imputed", attendance_imputed)
-s3.metric("Marks left missing (flagged)", missing_marks)
-s4.metric("Rows with flags", flagged_rows)
+s1.metric("Rows removed (duplicates)", row_removed)
+s2.metric("Values invalidated and flagged", values_invalidated)
+s3.metric("Attendance imputed", attendance_imputed)
+s4.metric("Marks left missing (flagged)", missing_marks)
 
 with st.expander("View applied actions", expanded=False):
     summary_df = pd.DataFrame(
         {
             "Action": [
-                "Removed duplicates / rejected conflicts & invalid ranges",
-                "Standardized names, departments, gender",
-                "Imputed missing attendance (department median)",
+                "Removed duplicate rows",
+                "Invalidated and flagged out-of-range values",
+                "Standardized names, departments, gender, grades",
+                "Parsed attendance '%' values and age text suffixes",
+                "Imputed missing/unparseable attendance (department median)",
                 "Kept missing/invalid marks as NaN (flagged)",
             ],
-            "Status": ["Done", "Done", f"{attendance_imputed} rows", f"{missing_marks} rows"],
+            "Status": [
+                f"{row_removed} rows",
+                f"{values_invalidated} values",
+                "Done",
+                "Done",
+                f"{attendance_imputed} rows",
+                f"{missing_marks} rows",
+            ],
         }
     )
     st.dataframe(summary_df, use_container_width=True, hide_index=True)
@@ -293,22 +368,74 @@ st.divider()
 st.markdown('<div class="step-header accent-purple">Step 5: Explore Details</div>', unsafe_allow_html=True)
 st.caption("Select a section to view records, charts, or reports.")
 
-btn1, btn2, btn3, btn4 = st.columns(4)
-if btn1.button("Show Cleaned Records", use_container_width=True):
-    st.session_state["view_section"] = "cleaned"
-if btn2.button("Show Rejected Records", use_container_width=True):
-    st.session_state["view_section"] = "rejected"
-if btn3.button("Show Charts", use_container_width=True):
-    st.session_state["view_section"] = "charts"
-if btn4.button("Show Reports & Files", use_container_width=True):
-    st.session_state["view_section"] = "reports"
-
 view = st.session_state.get("view_section", "cleaned")
+view_options = {
+    "Cleaned Records": "cleaned",
+    "Rejected Records": "rejected",
+    "Charts": "charts",
+    "Reports & Files": "reports",
+}
+current_label = next(
+    (label for label, key in view_options.items() if key == view),
+    "Cleaned Records",
+)
+selected_label = st.segmented_control(
+    "View section",
+    options=list(view_options.keys()),
+    default=current_label,
+    key="view_selector",
+    label_visibility="collapsed",
+)
+if selected_label is None:
+    selected_label = current_label
+view = view_options[selected_label]
+st.session_state["view_section"] = view
 
 if view == "cleaned":
     st.markdown('<div class="section-label accent-green">Cleaned Records</div>', unsafe_allow_html=True)
     st.dataframe(clean_df, use_container_width=True)
-    st.download_button("Download cleaned CSV", data=clean_df.to_csv(index=False), file_name="students_clean.csv", mime="text/csv")
+
+    clean_download_df = (
+        clean_df.drop(columns=["data_quality_flag"])
+        if "data_quality_flag" in clean_df.columns
+        else clean_df.copy()
+    )
+    st.caption("Download CSV or Excel, with or without audit flags.")
+    dl1, dl2 = st.columns(2)
+    with dl1:
+        st.download_button(
+            "Cleaned data (CSV)",
+            data=clean_download_df.to_csv(index=False),
+            file_name="students_clean.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
+    with dl2:
+        st.download_button(
+            "Cleaned data with audit flags (CSV)",
+            data=clean_df.to_csv(index=False),
+            file_name="students_clean_audit.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
+
+    dl3, dl4 = st.columns(2)
+    with dl3:
+        st.download_button(
+            "Cleaned data (Excel)",
+            data=_to_excel_bytes(clean_download_df),
+            file_name="students_clean.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            use_container_width=True,
+        )
+    with dl4:
+        st.download_button(
+            "Cleaned data with audit flags (Excel)",
+            data=_to_excel_bytes(clean_df),
+            file_name="students_clean_audit.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            use_container_width=True,
+        )
 
 elif view == "rejected":
     st.markdown('<div class="section-label accent-red">Rejected Records</div>', unsafe_allow_html=True)
@@ -323,7 +450,23 @@ elif view == "rejected":
                 hide_index=True,
             )
         st.dataframe(rejected_df, use_container_width=True)
-    st.download_button("Download rejected CSV", data=rejected_df.to_csv(index=False), file_name="rejected_records.csv", mime="text/csv")
+    rdl1, rdl2 = st.columns(2)
+    with rdl1:
+        st.download_button(
+            "Download rejected CSV",
+            data=rejected_df.to_csv(index=False),
+            file_name="rejected_records.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
+    with rdl2:
+        st.download_button(
+            "Download rejected Excel",
+            data=_to_excel_bytes(rejected_df),
+            file_name="rejected_records.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            use_container_width=True,
+        )
 
 elif view == "charts":
     st.markdown('<div class="section-label accent-purple">Charts</div>', unsafe_allow_html=True)
@@ -346,14 +489,23 @@ elif view == "reports":
     st.markdown('<div class="section-label">Output files</div>', unsafe_allow_html=True)
     outputs_df = pd.DataFrame(
         {
-            "Output": ["Cleaned CSV", "Rejected CSV", "SQLite DB", "Quality report", "Analysis report", "Charts folder"],
+            "Output": [
+                "Cleaned CSV (no audit flag)",
+                "Cleaned CSV (audit flags)",
+                "Rejected CSV",
+                "SQLite DB",
+                "Quality report",
+                "Analysis report",
+                "Charts folder",
+            ],
             "Path": [
-                str(CLEAN_DATA_FILE),
-                str(REJECTED_DATA_FILE),
-                "data/processed/students.db (table: students)",
-                str(QUALITY_REPORT_FILE),
-                str(ANALYSIS_REPORT_FILE),
-                str(OUTPUTS_CHARTS_DIR),
+                _relative_path(CLEAN_DATA_FILE),
+                _relative_path(CLEAN_AUDIT_DATA_FILE),
+                _relative_path(REJECTED_DATA_FILE),
+                f"{_relative_path(SQLITE_DB_FILE)} (tables: {SQLITE_TABLE}, {SQLITE_AUDIT_TABLE})",
+                _relative_path(QUALITY_REPORT_FILE),
+                _relative_path(ANALYSIS_REPORT_FILE),
+                _relative_path(OUTPUTS_CHARTS_DIR),
             ],
         }
     )

@@ -34,8 +34,14 @@ def profile_data(df: pd.DataFrame) -> Dict[str, Any]:
     profile["total_nulls"] = int(null_counts.sum())
 
     if "Student ID" in df.columns:
-        profile["duplicate_student_ids"] = int(df["Student ID"].duplicated().sum())
+        id_text = df["Student ID"].astype("string").str.strip()
+        blank_id_mask = id_text.isna() | id_text.eq("")
+        profile["missing_student_ids"] = int(blank_id_mask.sum())
+        profile["duplicate_student_ids"] = int(
+            df.loc[~blank_id_mask, "Student ID"].duplicated().sum()
+        )
     else:
+        profile["missing_student_ids"] = 0
         profile["duplicate_student_ids"] = 0
     profile["exact_duplicate_rows"] = int(df.duplicated().sum())
 

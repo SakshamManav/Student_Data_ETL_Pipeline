@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 from typing import Any, Dict, List, Tuple
 
 import numpy as np
@@ -38,6 +39,41 @@ def _title_case_name(value: Any) -> Any:
         return np.nan
     cleaned = " ".join(str(value).strip().split())
     return cleaned.title() if cleaned else np.nan
+
+
+def _parse_attendance(value: Any) -> Any:
+    """Parse attendance values such as '92%' into numeric percentages."""
+    if pd.isna(value):
+        return np.nan
+    text = str(value).strip().replace("%", "").strip()
+    if not text:
+        return np.nan
+    try:
+        return float(text)
+    except (TypeError, ValueError):
+        return np.nan
+
+
+def _parse_age(value: Any) -> Any:
+    """Extract the leading integer from an age value such as '19 yrs'."""
+    if pd.isna(value):
+        return np.nan
+    if isinstance(value, (int, np.integer)):
+        return int(value)
+    if isinstance(value, (float, np.floating)):
+        return np.nan if np.isnan(value) else int(value)
+    match = re.match(r"\s*(-?\d+)", str(value))
+    if match is None:
+        return np.nan
+    return int(match.group(1))
+
+
+def _standardize_grade(value: Any) -> Any:
+    """Standardize grade labels to uppercase."""
+    if pd.isna(value):
+        return np.nan
+    cleaned = str(value).strip().upper()
+    return cleaned if cleaned else np.nan
 
 
 def _map_category(value: Any, mapping: Dict[str, str]) -> Any:
@@ -81,17 +117,21 @@ def _resolve_duplicate_ids(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame
     exact_dups = df[df.duplicated(keep="first")].copy()
     if not exact_dups.empty:
         exact_dups["rejection_reason"] = "exact_duplicate_row"
+        exact_dups["action"] = "row_removed"
         rejected_parts.append(exact_dups)
         df = df.drop_duplicates(keep="first")
 
-    # Conflicting duplicate IDs (same ID, different content)
+    # Conflicting duplicate IDs (same ID, different content); blank IDs are ignored
     if "Student ID" in df.columns:
-        conflict_mask = df.duplicated(subset=["Student ID"], keep="first")
+        id_text = df["Student ID"].astype("string").str.strip()
+        valid_id_mask = id_text.notna() & id_text.ne("")
+        conflict_mask = valid_id_mask & df.duplicated(subset=["Student ID"], keep="first")
         conflicts = df[conflict_mask].copy()
         if not conflicts.empty:
             conflicts["rejection_reason"] = "conflicting_duplicate_student_id"
+            conflicts["action"] = "row_removed"
             rejected_parts.append(conflicts)
-            df = df.drop_duplicates(subset=["Student ID"], keep="first")
+            df = df[~conflict_mask].copy()
 
     rejected_df = (
         pd.concat(rejected_parts, ignore_index=True) if rejected_parts else pd.DataFrame()
@@ -118,17 +158,28 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         df["Department"] = df["Department"].apply(lambda v: _map_category(v, DEPARTMENT_MAP))
     if "Gender" in df.columns:
         df["Gender"] = df["Gender"].apply(lambda v: _map_category(v, GENDER_MAP))
+    if "Grade" in df.columns:
+        df["Grade"] = df["Grade"].apply(_standardize_grade)
 
-    # 2. Convert types
-    for col in ["Age", "Attendance", "Marks"]:
-        if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+    # 2. Convert types (attendance may contain '%', age may contain text suffixes)
+    if "Age" in df.columns:
+        df["Age"] = df["Age"].apply(_parse_age)
+    if "Attendance" in df.columns:
+        df["Attendance"] = df["Attendance"].apply(_parse_attendance)
+    if "Marks" in df.columns:
+        df["Marks"] = pd.to_numeric(df["Marks"], errors="coerce")
 
     # 3. Handle duplicates (exact and conflicting IDs)
     df, dup_rejected = _resolve_duplicate_ids(df)
     if not dup_rejected.empty:
         logger.info("Rejected %d duplicate records", len(dup_rejected))
         rejected_records = pd.concat([rejected_records, dup_rejected], ignore_index=True)
+
+    # Capture truly missing/unparseable attendance before range validation.
+    if "Attendance" in df.columns:
+        attendance_imputable_mask = df["Attendance"].isna().copy()
+    else:
+        attendance_imputable_mask = pd.Series(False, index=df.index)
 
     # 4. Validation: flag invalid values as NaN (do not silently fix)
     flags: List[str] = ["ok"] * len(df)
@@ -148,6 +199,7 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         for idx in df.index[invalid_marks_mask]:
             row = df.loc[idx].copy()
             row["rejection_reason"] = "invalid_marks"
+            row["action"] = "value_invalidated"
             invalid_rows.append(row)
             df.at[idx, "Marks"] = np.nan
             _flag(int(idx), "invalid_marks")
@@ -159,6 +211,7 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         for idx in df.index[invalid_att_mask]:
             row = df.loc[idx].copy()
             row["rejection_reason"] = "invalid_attendance"
+            row["action"] = "value_invalidated"
             invalid_rows.append(row)
             df.at[idx, "Attendance"] = np.nan
             _flag(int(idx), "invalid_attendance")
@@ -170,6 +223,7 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         for idx in df.index[invalid_age_mask]:
             row = df.loc[idx].copy()
             row["rejection_reason"] = "invalid_age"
+            row["action"] = "value_invalidated"
             invalid_rows.append(row)
             df.at[idx, "Age"] = np.nan
             _flag(int(idx), "invalid_age")
@@ -185,19 +239,21 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     # Marks are left as NaN and flagged (not invented) because marks represent
     # actual academic performance and imputing them would fabricate results.
     if "Attendance" in df.columns:
-        missing_att_mask = df["Attendance"].isna()
-        if "Department" in df.columns:
-            dept_medians = df.groupby("Department")["Attendance"].transform("median")
-            overall_median = df["Attendance"].median()
-            fill_values = dept_medians.fillna(overall_median)
-            if pd.isna(overall_median):
-                fill_values = fill_values.fillna(0.0)
-            df.loc[missing_att_mask, "Attendance"] = fill_values[missing_att_mask]
-        else:
-            overall_median = df["Attendance"].median()
-            df.loc[missing_att_mask, "Attendance"] = 0.0 if pd.isna(overall_median) else overall_median
-        for idx in df.index[missing_att_mask]:
-            _flag(int(idx), "attendance_imputed")
+        missing_att_mask = attendance_imputable_mask & df["Attendance"].isna()
+        if missing_att_mask.any():
+            if "Department" in df.columns:
+                dept_medians = df.groupby("Department")["Attendance"].transform("median")
+                overall_median = df["Attendance"].median()
+                fill_values = dept_medians.fillna(overall_median)
+                if pd.isna(overall_median):
+                    fill_values = fill_values.fillna(0.0)
+                df.loc[missing_att_mask, "Attendance"] = fill_values[missing_att_mask]
+            else:
+                overall_median = df["Attendance"].median()
+                fill_value = 0.0 if pd.isna(overall_median) else overall_median
+                df.loc[missing_att_mask, "Attendance"] = fill_value
+            for idx in df.index[missing_att_mask]:
+                _flag(int(idx), "attendance_imputed")
 
     if "Marks" in df.columns:
         missing_marks_mask = df["Marks"].isna()
@@ -223,12 +279,16 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
 
     # Ensure rejected records file has consistent columns when empty
     if rejected_records.empty:
-        rejected_records = pd.DataFrame(columns=list(df.columns) + ["rejection_reason"])
+        rejected_records = pd.DataFrame(
+            columns=list(df.columns) + ["rejection_reason", "action"]
+        )
     else:
         # Keep a clear, useful subset/order for rejected output
         base_cols = [c for c in df.columns if c in rejected_records.columns or c != "data_quality_flag"]
         if "rejection_reason" not in rejected_records.columns:
             rejected_records["rejection_reason"] = "unknown"
+        if "action" not in rejected_records.columns:
+            rejected_records["action"] = "unknown"
         # Reindex to include all original-like columns plus reason
         for col in base_cols:
             if col not in rejected_records.columns:
@@ -236,7 +296,7 @@ def transform_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         ordered = [c for c in [
             "Student ID", "Name", "Age", "Gender", "Department", "Attendance", "Marks",
             "Grade", "Percentage", "Grade_Computed", "Performance_Category",
-            "Attendance_Band", "rejection_reason",
+            "Attendance_Band", "rejection_reason", "action",
         ] if c in rejected_records.columns]
         remaining = [c for c in rejected_records.columns if c not in ordered]
         rejected_records = rejected_records[ordered + remaining]

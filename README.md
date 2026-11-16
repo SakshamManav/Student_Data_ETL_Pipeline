@@ -23,7 +23,7 @@ flowchart LR
 student-etl-pipeline/
   data/
     raw/                 # generated/input sample data
-    processed/           # students_clean.csv, students.db, rejected_records.csv
+    processed/           # students_clean.csv, students_clean_audit.csv, students.db, rejected_records.csv
   outputs/
     charts/              # PNG charts
     reports/             # data_quality_report.md, analysis_summary.md
@@ -89,8 +89,9 @@ jupyter notebook notebooks/analysis.ipynb
 ```
 
 ## Sample outputs (paths)
-- Cleaned data (CSV): `data/processed/students_clean.csv`
-- Cleaned data (SQLite): `data/processed/students.db` (table: `students`)
+- Cleaned data (CSV, no audit flag): `data/processed/students_clean.csv`
+- Cleaned data with audit flags (CSV): `data/processed/students_clean_audit.csv`
+- Cleaned data (SQLite): `data/processed/students.db` (tables: `students`, `students_audit`)
 - Rejected/invalid records: `data/processed/rejected_records.csv`
 - Charts: `outputs/charts/`
   - `data_quality_issues.png`
@@ -104,9 +105,11 @@ jupyter notebook notebooks/analysis.ipynb
 - Logs: `logs/pipeline.log`
 
 ## Design decisions
-- **Median imputation for attendance:** Attendance is filled with the **department median** because attendance patterns can differ by department and the median is robust to outliers. Missing attendance is flagged as `attendance_imputed`.
+- **Median imputation for attendance:** Only truly missing or unparseable attendance values (e.g. blank or text) are filled with the **department median**. Parsed values such as `92%` are kept as numeric, while out-of-range attendance is invalidated, flagged, and never imputed. Imputed values are flagged as `attendance_imputed`.
 - **Marks are not imputed:** Missing or out-of-range marks are set to `NaN` and flagged (e.g. `missing_marks`, `invalid_marks`). Marks represent actual academic performance; inventing them would fabricate results and distort analysis.
-- **Rejected records are kept:** Exact duplicates, conflicting duplicate Student IDs, and records with out-of-range values are logged to `data/processed/rejected_records.csv` with a `rejection_reason` so nothing disappears silently.
+- **Text cleanup:** Names are title-cased, departments/genders are mapped to canonical values, grades are uppercased, attendance `%` suffixes are parsed, and age text such as `19 yrs` is converted to its leading integer.
+- **Rejected records are kept:** Exact duplicates, conflicting duplicate Student IDs, and records with out-of-range values are logged to `data/processed/rejected_records.csv` with `rejection_reason` and an `action` column (`row_removed` or `value_invalidated`) so nothing disappears silently.
+- **Blank IDs are not duplicate conflicts:** Duplicate-ID checks ignore blank Student IDs; missing IDs are reported separately.
 - **Validation over silent fixing:** Values outside valid ranges (marks/attendance 0–100, plausible age) are flagged and invalidated rather than clipped or guessed.
 - **Idempotent pipeline:** Running the pipeline twice with the same input produces the same outputs (raw data untouched, processed outputs overwritten deterministically).
 - **Centralized config:** Paths, schema, ranges, mappings, and grade bands live in `src/config.py` to avoid magic numbers.

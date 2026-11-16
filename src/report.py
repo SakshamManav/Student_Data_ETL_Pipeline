@@ -51,6 +51,16 @@ def generate_quality_report(
         if not rejected_df.empty and "rejection_reason" in rejected_df.columns
         else {}
     )
+    row_removed = (
+        int((rejected_df["action"] == "row_removed").sum())
+        if not rejected_df.empty and "action" in rejected_df.columns
+        else 0
+    )
+    values_invalidated = (
+        int((rejected_df["action"] == "value_invalidated").sum())
+        if not rejected_df.empty and "action" in rejected_df.columns
+        else 0
+    )
     flag_counts = (
         clean_df["data_quality_flag"].value_counts().to_dict()
         if "data_quality_flag" in clean_df.columns
@@ -64,6 +74,7 @@ def generate_quality_report(
         f"- **Rows read:** {raw_profile.get('row_count', 0)}",
         f"- **Columns:** {raw_profile.get('column_count', 0)}",
         f"- **Total null values:** {raw_profile.get('total_nulls', 0)}",
+        f"- **Missing Student IDs:** {raw_profile.get('missing_student_ids', 0)}",
         f"- **Duplicate Student IDs:** {raw_profile.get('duplicate_student_ids', 0)}",
         f"- **Exact duplicate rows:** {raw_profile.get('exact_duplicate_rows', 0)}",
         "",
@@ -91,9 +102,11 @@ def generate_quality_report(
     lines += [
         "",
         "## 2. After Cleaning",
+        f"- **Rows removed (duplicates):** {row_removed}",
+        f"- **Values invalidated and flagged:** {values_invalidated}",
         f"- **Cleaned rows:** {len(clean_df)}",
         f"- **Cleaned columns:** {len(clean_df.columns)}",
-        f"- **Rejected records:** {len(rejected_df)}",
+        f"- **Reconciliation:** {raw_profile.get('row_count', 0)} rows before - {row_removed} rows removed = {len(clean_df)} cleaned rows",
         "",
         "### Cleaned data quality flags",
     ]
@@ -105,15 +118,17 @@ def generate_quality_report(
 
     lines += ["", "## 3. What Was Fixed"]
     lines.append("- Trimmed whitespace and standardized name casing (title case).")
-    lines.append("- Mapped department and gender variants to canonical values using config dictionaries.")
-    lines.append("- Converted Age, Attendance, and Marks to numeric types.")
-    lines.append("- Dropped exact duplicate rows; for conflicting duplicate Student IDs kept the first occurrence.")
+    lines.append("- Standardized grades to uppercase and mapped department/gender variants to canonical values.")
+    lines.append("- Parsed attendance values such as '92%' and ages such as '19 yrs' into numbers.")
+    lines.append("- Dropped exact duplicate rows; for conflicting duplicate Student IDs kept the first occurrence (blank IDs ignored).")
     lines.append("- Flagged out-of-range Marks (0-100), Attendance (0-100), and Age (plausible range) as NaN instead of silently correcting them.")
-    lines.append("- Filled missing Attendance with the department median (robust, department-specific).")
+    lines.append("- Filled only truly missing/unparseable Attendance with the department median (robust, department-specific).")
     lines.append("- Left missing/invalid Marks as NaN and flagged them (marks are not invented).")
     lines.append("- Added derived fields: Percentage, Grade_Computed, Performance_Category, Attendance_Band, and data_quality_flag.")
 
-    lines += ["", "## 4. What Was Rejected", "Records were written to `data/processed/rejected_records.csv` so nothing disappears silently."]
+    lines += ["", "## 4. What Was Rejected", "Entries were written to `data/processed/rejected_records.csv` so nothing disappears silently."]
+    lines.append(f"- Rows removed (duplicates): {row_removed}")
+    lines.append(f"- Values invalidated and flagged: {values_invalidated}")
     if rejection_counts:
         lines.append("")
         lines.append("### Rejection reasons")
@@ -121,7 +136,7 @@ def generate_quality_report(
             lines.append(f"- `{reason}`: {count}")
     else:
         lines.append("")
-        lines.append("- No records rejected.")
+        lines.append("- No rejected log entries.")
 
     lines += [
         "",

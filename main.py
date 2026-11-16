@@ -15,6 +15,7 @@ from typing import Any, Dict
 from src.analyze import analyze_data
 from src.config import (
     ANALYSIS_REPORT_FILE,
+    CLEAN_AUDIT_DATA_FILE,
     CLEAN_DATA_FILE,
     DATA_PROCESSED_DIR,
     LOG_FILE,
@@ -23,6 +24,7 @@ from src.config import (
     QUALITY_REPORT_FILE,
     RAW_DATA_FILE,
     REJECTED_DATA_FILE,
+    SQLITE_AUDIT_TABLE,
     SQLITE_DB_FILE,
     SQLITE_TABLE,
 )
@@ -80,9 +82,11 @@ def run_pipeline(input_path: Path) -> Dict[str, Any]:
         clean_df,
         rejected_df,
         CLEAN_DATA_FILE,
+        CLEAN_AUDIT_DATA_FILE,
         REJECTED_DATA_FILE,
         SQLITE_DB_FILE,
         SQLITE_TABLE,
+        SQLITE_AUDIT_TABLE,
     )
     logger.info("Load verified: %d rows, %d columns in SQLite", verified_rows, verified_cols)
 

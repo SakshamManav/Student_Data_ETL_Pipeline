@@ -19,9 +19,11 @@ LOGS_DIR: Path = BASE_DIR / "logs"
 
 RAW_DATA_FILE: Path = DATA_RAW_DIR / "students_raw.csv"
 CLEAN_DATA_FILE: Path = DATA_PROCESSED_DIR / "students_clean.csv"
+CLEAN_AUDIT_DATA_FILE: Path = DATA_PROCESSED_DIR / "students_clean_audit.csv"
 REJECTED_DATA_FILE: Path = DATA_PROCESSED_DIR / "rejected_records.csv"
 SQLITE_DB_FILE: Path = DATA_PROCESSED_DIR / "students.db"
 SQLITE_TABLE: str = "students"
+SQLITE_AUDIT_TABLE: str = "students_audit"
 
 LOG_FILE: Path = LOGS_DIR / "pipeline.log"
 QUALITY_REPORT_FILE: Path = OUTPUTS_REPORTS_DIR / "data_quality_report.md"
